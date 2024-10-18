@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Profiles</title>
+    <link rel="stylesheet" href="../styles/explore.css">
+    <script type="module" src="../scripts/profile.js"></script>
+
+</head>
+<body>
+    <a href="index.html" class="back-link">
+        <img src="../images/back.svg" alt="Go Back" class="back-icon">
+      </a>
+    <!-- Search Bar -->
+    <div class="search-container">
+        <img src="../images/search.png" alt="" width="50px" height="50px">
+        <input type="text" id="searchBar" placeholder="Search by name..." onkeyup="searchProfessors()">
+    </div>
+
+    <!-- Main Container where professor cards will be dynamically inserted -->
+    <div class="container">
+        <!-- Professor cards will be added here by JavaScript -->
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="../scripts/explore.js"></script>
+</body>
+</html>
