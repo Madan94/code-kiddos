@@ -30,6 +30,9 @@ const responses = {
     ]
 };
 
+// Display a default greeting message when the chat initializes
+appendMessage(getRandomResponse(responses.greeting), 'bot');
+
 function sendMessage() {
     const userMessage = inputField.value.trim();
 
@@ -56,7 +59,7 @@ function botReply(userMessage) {
     }, 500); // Simulate delay for bot response
 
     // Redirect to mentor page if the user is asking about mentors
-    if (containsWord(userMessage, ['mentor', 'mentor details', 'find mentor'])) {
+    if (containsWord(userMessage, ['mentor', 'mentor details', 'find mentor' ,'teacher','professor' , 'student'])) {
         setTimeout(() => {
             window.location.href = 'explore.html';  // Replace with the actual URL of your mentors page
         }, 2000); // Redirect after a short delay to give the bot time to respond
@@ -69,7 +72,7 @@ function getSimulatedAIResponse(userMessage) {
     // Basic intent detection using keywords
     if (containsWord(userMessage, ['hello', 'hi', 'hey', 'greetings'])) {
         return getRandomResponse(responses.greeting);
-    } else if (containsWord(userMessage, ['mentor', 'mentor details', 'find mentor'])) {
+    } else if (containsWord(userMessage, ['mentor', 'mentor details', 'find mentor','teacher','professor' , 'student'])) {
         return getRandomResponse(responses.mentor);
     } else if (containsWord(userMessage, ['student', 'learn', 'study', 'improve'])) {
         return getRandomResponse(responses.student);
