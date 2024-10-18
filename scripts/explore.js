@@ -185,15 +185,15 @@ function displayProfessors(professorList = professors) {
 
         // Create additional info for education, email, phone
         const education = document.createElement('p');
-        education.textContent = `Education: ${professor.education}`;
+        education.innerHTML = `<span style="font-weight: bold;">Education:</span> ${professor.education}`;
         education.classList.add('education');
 
         const email = document.createElement('p');
-        email.innerHTML = `Email: ${professor.email.length > 0 ? professor.email.join(', ') : 'N/A'}`;
+        email.innerHTML = `<span style="font-weight: bold;">Email:</span> ${professor.email.length > 0 ? professor.email.join(', ') : 'N/A'}`;
         email.classList.add('email');
 
         const phone = document.createElement('p');
-        phone.textContent = `Phone: ${professor.phone}`;
+        phone.innerHTML = `<span style="font-weight: bold;">Phone:</span> ${professor.phone || 'N/A'}`;
         phone.classList.add('phone');
 
         const button = document.createElement('a');

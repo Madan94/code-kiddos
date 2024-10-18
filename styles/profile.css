@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url('../images/bg.jpeg'); /* Replace with the actual path to your image */
+    background-image: url('../images/bg.svg'); /* Replace with the actual path to your image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,9 +12,11 @@ body {
 
 
 .profile-container {
+    margin-top: 100px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    /* align-items: center; */
+    align-items: start;
     height: 100vh;
     padding: 20px;
     box-sizing: border-box;
@@ -22,7 +24,6 @@ body {
 
 .profile-card {
     width: 300px;
-    height: 400px;
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
@@ -35,7 +36,7 @@ body {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    margin-top: -100px;
+    /* margin-top: -100px; */
     transition: transform 0.3s ease;
 }
 
@@ -46,6 +47,8 @@ body {
 .profile-details {
     margin-top: 20px;
     font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    width: 400px;
 
 }
 
@@ -84,7 +87,7 @@ body {
 .tabs {
     display: flex;
     justify-content: space-around;
-    background-color: #f56464;
+    background-color: white;
     border-radius: 8px;
     padding: 10px;
     margin-bottom: 30px;
@@ -92,7 +95,7 @@ body {
 }
 
 .tab {
-    color: white;
+    color: #111827;
     padding: 10px 20px;
     cursor: pointer;
 }
@@ -100,6 +103,7 @@ body {
 .tab.active {
     background-color: #ff0066;
     border-radius: 5px;
+    color: white;
 }
 
 /* Sessions Container */
@@ -148,13 +152,14 @@ body {
     background-color: #e0e0e0; /* Background color for tags */
     border-radius: 5px; /* Rounded corners for tags */
     padding: 10px 15px; /* Padding for tags */
-    font-size: 14px; /* Font size for tags */
+    font-size: 15px; /* Font size for tags */
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .tag:hover {
     transform: scale(1.05); /* Enlarge on hover */
-    background-color: #ff9238; /* Slightly darker background on hover */
+    background-color: #111827; /* Slightly darker background on hover */
+    color: white;
 }
 /* Card styles */
 .card {
@@ -217,6 +222,7 @@ body {
 .session p {
     font-size: 16px;
     color: #555;
+    text-align: justify;
 }
 
 /* Styling the join button */
@@ -233,10 +239,96 @@ body {
 
 /* Hover effect on the join button */
 .session-link:hover {
-    background-color: orange;
+    background-color: #111827;
+    color: white;
 }
 
 .total{
     max-width: 700px;
 }
 
+/* adding some minority styles */
+.sub-head{
+    color: #f56464;
+    font-weight: bold;
+}
+
+.sub-title{
+color: #fc8019; 
+text-decoration: underline;
+}
+/* Flexbox for the Rating Section */
+.rating-section-head {
+    font-size: larger;
+    font-weight: bold;
+    margin-left: 110px;
+    display: flex;
+    gap: 10px; /* Align text and image on opposite sides */
+    align-items: center; /* Vertically center the text and image */
+    padding: 10px; /* Add padding if necessary */
+}
+
+/* Star Icon Styling */
+.star-icon {
+    height: 25px; /* Set icon height */
+    width: 25px;  /* Set icon width */
+}
+
+/* Back link styling */
+.back-link {
+    position: fixed;
+    top: 20px;    /* Distance from the top */
+    left: 20px;   /* Distance from the left */
+    z-index: 100; /* Ensure it stays on top of other content */
+}
+
+/* Back icon styling */
+.back-icon {
+    width: 40px;   /* Adjust size of the icon */
+    height: 40px;
+    cursor: pointer; /* Make it clickable */
+}
+
+/* Container styling */
+.review-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/* Flex row between image and text */
+.review-header {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Adjust this value to control the space */
+    align-items: center;
+}
+
+/* Profile image */
+.profile-img {
+    height: 60px;
+    width: 60px;
+}
+
+/* Reviewer details */
+.reviewer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewer-name {
+    margin-top: 16px;
+    font-size: 1.25rem; /* Equivalent to text-xl */
+    font-weight: 600; /* Equivalent to font-semibold */
+}
+
+/* Rating star image */
+.rating-star {
+    height: 70px;
+    width: 70px;
+}
+
+/* Review text */
+.review-text {
+    margin-left: 80px; /* Equivalent to ml-20 */
+}

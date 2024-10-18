@@ -140,9 +140,9 @@ function getProfessorDetails() {
         
         // Display professor details
         document.getElementById('professor-name').textContent = professor.name;
-        document.getElementById('professor-education').textContent = `Education: ${professor.education}`;
-        document.getElementById('professor-email').textContent = `Email: ${professor.email.join(', ')}`;
-        document.getElementById('professor-phone').textContent = `Phone: ${professor.phone}`;
+        document.getElementById('professor-education').innerHTML = `<span style='color:#f56464; font-weight: bold;'>Education:</span> ${professor.education}`;
+        document.getElementById('professor-email').innerHTML = `<span style='color:#f56464; font-weight: bold;'>Email:</span> ${professor.email.join(', ')}`;
+        document.getElementById('professor-phone').innerHTML = `<span style='color:#f56464; font-weight: bold;'>Phone:</span> ${professor.phone}`;
         document.getElementById('professor-image').src = professor.image;
         document.getElementById('professor-image').alt = `${professor.name}'s profile picture`;
     } else {
