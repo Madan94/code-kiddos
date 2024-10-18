@@ -2,29 +2,31 @@
 const service_content = [
     {
         head: "Sell 1 : 1 Video Call.",
-        content: "From your valued followers, dedicated fans, to aspiring students, there is a consistent demand for your expertise and presence.Unlock a world of possibilities as you connect with your audience.",
-        feature: "High Fidelity Video Offer High quality Video Conferencing Service with No Worries about Bandwidth. <br><br> Multi Screenshare Allow participants in the call to share screen with you in real-time. <br><br> Whiteboard Brainstorm and Collaborate in real time Using a shared Whiteboard.",
+        content: "Connect with experienced faculty mentors to clarify your doubts and receive personalized guidance tailored to your academic and career goals.",
+        feature: "Easy Scheduling Book sessions effortlessly based on mentor availability. <br><br> Reminder Notifications Receive timely alerts for your upcoming sessions. <br><br> Interactive Discussions Engage in meaningful conversations to enhance your learning experience.",
         image: "../images/video_call.png"
     },
 
     {
-        head: "Sell 1 : 1 DMs.",
-        content: "Stop Giving Out your Personal Email , Phone Number or Any Personal Detail , Provide Value just by texting.",
+        head: "Message Your Mentor",
+        content: "No need to share personal contact details. Communicate directly with your mentors through our secure messaging platform.",
+        feature: "Intuitive Chat Interface Enjoy smooth navigation for effective communication. <br><br> File Sharing Easily share documents, notes, or resources during your chats.",
         feature: "User-Friendly Chat Interface Enjoy Effortless navigation and seamless chatting experience. <br><br> Rich Media Support Sharing Design Mockups, Presentations, Resumes, or any other files is fluidly integrated into your conversations.",
         image: "../images/dms.png"
     },
 
     {
-        head: "Sell Pay to Attend Webinars.",
-        content: "Be it Virtual Meet and Greet , Carrear Growth Hack or Social Media Strategy coaching. We got your back.",
-        feature: "End to End Support Leave the hassle of sending confirmation emails, WhatsApp messages, checking payment status for every participant, sending Zoom links prior to meetings, collecting testimonials, and follow-ups to us. We've got you covered every step of the way. <br><br> Dynamic Tracking Track and Follow up on every Participant with Ease",
+        head: "Join Engaging Webinars",
+        content: "Participate in webinars focused on career development, skill-building, and industry insights led by knowledgeable faculty.",
+        feature: "Comprehensive Support From registration to follow-ups, we handle all aspects of your webinar experience. <br><br> Participant Engagement Track attendance and gather feedback with ease.",
         image: "../images/webniar.png"
     },
 
     {
-        head: "Sell Exclusive Content.",
-        content: "Start Selling Courses that Showcase your Expertise , tallent or persona and Create a Passive Income that Rewards you.",
-        feature: "Anti-Piracy Enforcement Get DRM Encryption , IP Restriction , Screen Capture Denial to Safe Guard your Course Content",
+        
+    head: "Connect Through Mentorship",
+    content: "Establish meaningful connections with faculty mentors who provide personalized guidance and support throughout your academic journey.",
+    feature: "Personalized Guidance Receive tailored advice from experienced faculty. <br><br> Strengthened Connections Foster long-term relationships that enhance your learning experience.",
         image: "../images/exclusive_content.png"
     }
 ]
