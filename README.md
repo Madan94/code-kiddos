@@ -5,5 +5,5 @@ Team Code Kiddos :-
 
 1. Madhanraj M
 2. Aarya Balan
-3. Aadhitya Balan
+3. Adithya Balan
 4. Muthuraj
