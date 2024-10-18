@@ -1,97 +1,121 @@
-/* Container for the card grid */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Overall Styling */
+
+body{
+    margin:0;
+    padding:20px;
+    font-family: "Poppins", serif;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.explore-mentors{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Spacing between cards */
-    justify-content: center; /* Center align the cards */
-    align-items: flex-start; /* Make sure the items align to the top */
-    margin: 20px 0; /* Some space around the container */
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start; 
+    margin: 20px 0; 
     padding: 10px;
     box-sizing: border-box;
 }
-.back-link {
-    position: fixed;
-    top: 20px;    /* Distance from the top */
-    left: 20px;   /* Distance from the left */
-    z-index: 100; /* Ensure it stays on top of other content */
+
+/* Header Section */
+
+.header{
+    display: flex;
+    justify-content: center;
 }
 
-/* Back icon styling */
-.back-icon {
-    width: 40px;   /* Adjust size of the icon */
-    height: 40px;
-    cursor: pointer; /* Make it clickable */
+.header-section{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:20px;
+    background-color: #fc8019;
+    border-radius:80px;
+    width:1200px;
+    margin:0;
+    color:#fff;
 }
-/* Outer card that holds the inner card */
+
 .outer-card {
-    width: 300px; /* Fixed width for all outer cards */
-    height: 480px; /* Fixed height for uniformity */
-    background-color: transparent; /* Initially transparent background */
+    width: 350px; 
+    height: 525px;
+    padding:20px; /
+    background-color: transparent; 
     border-radius: 10px;
-    padding: 10px;
-    transition: background-color 0.5s ease; /* Increased duration for smoother background transition */
+    transition: background-color 0.5s ease; 
     overflow: hidden;
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
-    display: flex; /* Flexbox for centering the inner card */
+    box-sizing: border-box; 
+    display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Box shadow for the outer card */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
 }
 
-/* Inner card that will shrink on hover */
 .card {
-    font-family: 'Poppins', sans-serif;
-
     background-color: #fff;
     border-radius: 8px;
-    transition: transform 0.5s ease, color 0.5s ease; /* Increased duration for smoother scaling and color transition */
+    transition: transform 0.5s ease, color 0.5s ease;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px;
     z-index: 1;
-    width: 100%; /* Ensure it takes up the full width of the outer card */
-    height: 100%; /* Ensure it takes up the full height of the outer card */
+    width: 100%;
+    height: 100%; 
 }
 
-/* Keep the styling for the name text */
 .name-overlay {
-    font-size: 18px; /* Name font size */
-    font-weight: bold; /* Bold font for the name */
+    font-size: 18px;
+    font-weight: bold;
 }
 
-/* Change the styling for info text */
+
 .education, .email, .phone {
-    font-family: 'Poppins', sans-serif;
-
-    margin: 10px 0; /* Margin for spacing */
-    color: #555; /* Darker gray for better visibility */
-    font-size: 0.95em; /* Slightly smaller font size */
-    line-height: 1; /* Improved line height for readability */
+    margin: 10px 0; 
+    color: #555; 
+    font-size: 0.95em;
+    line-height: 1; 
 }
 
-/* Shrink the card and change the outer background on hover */
+
 .outer-card:hover .card {
-    transform: scale(0.9); /* Shrinks inner card */
-    background-color: #fc8019; /* Inner card background turns orange on hover */
-    color: #fff; /* Change text color on hover */
-}
-
-.outer-card:hover {
-    background-color: #fc8019; /* Outer background turns orange on hover */
+    transform: scale(0.9); 
+    background-color: #fc8019; 
+    color: #fff; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding:30px;
 }
 
 .outer-card:hover .card p, 
-.outer-card:hover .card h3, 
-.outer-card:hover .profile-btn {
-    color: white; /* Change text and button color to white on hover */
+.outer-card:hover .card h3 {
+    color: white;
 }
 
-/* Image container and overlay */
+.outer-card:hover .profile-btn{
+    background-color: #fff;
+    color: #fc8019;
+}
+
+
 .image-container {
     position: relative;
     width: 100%;
-    height: 250px; /* Adjust image height for uniformity */
+    height: 250px; 
 }
 
 .mentor-image {
@@ -107,45 +131,48 @@
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.6);
-    padding: 10px;
+    padding: 0px 10px;
     color: white;
 }
 
 /* Profile button */
+
 .profile-btn {
-    padding: 10px;
-    background-color: #fc8019; /* Orange background */
-    color: white;              /* White text */
+    padding: 10px 20px;
+    background-color: #fc8019;
+    color: white;              
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    align-self: center;
-    text-decoration: none;
-    transition: background-color 0.5s ease, color 0.5s ease; /* Increased duration for smoother transition */
+    align-self: flex-start;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .profile-btn:hover {
     background-color: white !important;
     color: #fc8019 !important;
 }
-/* Style the search container */
+
 .search-container {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin:20px 0px;
+    gap:10px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    width:400px;
 }
 
 #searchBar {
     width: 300px;
     padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    outline: none;
-    transition: border-color 0.3s;
+    border:none;
+    font-size: 18px;
 }
 
-#searchBar:focus {
-    border-color: #fc8019;
+.search-container input[type=text]:focus{
+    border:1px solid #fff;
 }
