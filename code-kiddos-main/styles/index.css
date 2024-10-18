@@ -140,13 +140,21 @@ p {
 .find-mentor {
     outline: none;
     border: 1px solid #111827;
+    text-decoration: none;
+    color: #111827;
     padding: 10px 20px;
     background-color: transparent;
     border-radius: 7px;
     cursor: pointer;
 }
 
+.find-mentor:hover {
+    background-color: #111827;
+    color: white;
+}
+
 .explore-more {
+    text-decoration: none;
     outline: none;
     border: none;
     padding: 10px 20px;
@@ -154,6 +162,11 @@ p {
     color: white;
     border-radius: 7px;
     cursor: pointer;
+}
+
+.explore-more:hover {
+    background-color: #111827;
+    color: white;
 }
 
 /* styling our service */

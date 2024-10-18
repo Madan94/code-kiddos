@@ -78,6 +78,7 @@ body {
     position: fixed; /* Fix it to the bottom */
     bottom: 150px; /* Adjust based on the fixed image height */
     right: 20px; /* Align with the image */
+    z-index: 100;
 }
 
 .chatlogs {
