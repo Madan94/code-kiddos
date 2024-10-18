@@ -1,0 +1,256 @@
+* {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+p {
+    font-size: 19px;
+}
+
+/* styling navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 22px;
+    height: 100px;
+    border-bottom: 1px solid #eeeeee;
+    box-shadow: 1px 1px 10px #eeeeee;
+}
+
+.brand {
+    color: #fc8019;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.nav-links-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 40px;
+}
+
+.nav-links-section .nav-link {
+    text-decoration: none;
+    color: #111827;
+    font-weight: 400;
+    font-size: 22px;
+    transition: .2s;
+}
+
+.nav-link:hover {
+    color: #fc8019;
+}
+
+/* styling hero section */
+
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 40px;
+    justify-content: space-around;
+    align-items: start;
+    margin: auto;
+    margin: 0 50px;
+    margin-top: 80px;
+    animation: fade 1s;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 800px;
+    row-gap: 30px;
+}
+
+.hero-head {
+    font-size: 35px;
+    letter-spacing: 7px;
+}
+
+.content {
+    font-size: 22px;
+}
+
+.hero-description {
+    text-align: justify;
+}
+
+.our-products {
+    background-color: #fff7e0;
+    padding: 10px;
+    width: 650px;
+}
+
+
+.our-products-list {
+    display: flex;
+    column-gap: 10px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+.single-product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fcd9bd;
+    font-size: 30px;
+    border-radius: 7px;
+    min-width: 150px;
+    min-height: 180px;
+    transition: .2s;
+}
+
+.single-product-card:hover {
+    background-color: #fc8019;
+    color: white;
+}
+
+.our-products-list:hover .single-product-card:not(:hover) {
+    transform: scaleY(.9);
+    background-color: #111827;
+    color: white;
+}
+
+
+.hero-img {
+    width: 600px;
+}
+
+.find-section {
+    margin-top: 25px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.find-mentor {
+    outline: none;
+    border: 1px solid #111827;
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.explore-more {
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    background-color: #fc8019;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+/* styling our service */
+.our-service-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    /* width: 1400px; */
+    margin: auto;
+    margin-top: 70px;
+    animation: load;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+.our-service-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    padding: 20px 0;
+    box-shadow: 1px 1px 10px #eeeeee;
+    width: 80%;
+    margin: auto;
+}
+
+.our-service-title {
+    cursor: pointer;
+    transition: .2s;
+    border: 2px solid transparent;
+}
+
+.our-service-title:hover {
+    border-bottom: 2px solid #fc8019;
+}
+
+.active {
+    border-bottom: 2px solid #fc8019;
+}
+
+.about-our-service {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    align-self: center;
+    margin: auto 50px;
+
+}
+
+.service-content-main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 650px;
+}
+
+.our-service-content {
+    text-align: justify;
+    font-size: 18px;
+}
+
+.service-img {
+    width: 500px;
+}
+
+
+/* animation */
+
+@keyframes load {
+    from {
+        opacity: 0;
+        scale: 0.5;
+        clip-path: inset(0 100% 0 0);
+        filter: grayscale(100%);
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+        clip-path: inset(0 0 0 0);
+        filter: grayscale(0);
+    }
+}
+
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        clip-path: inset(0 0 0 100%);
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
