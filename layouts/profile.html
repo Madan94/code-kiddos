@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Professor Profile</title>
-    <link rel="stylesheet" href="profile.css" />
+    <link rel="stylesheet" href="../styles/profile.css" />
   </head>
   <body>
+    <!-- back link -->
+    <a href="explore.html" class="back-link">
+      <img src="../images/back.svg" alt="Go Back" class="back-icon">
+    </a>
+  
     <div class="profile-container">
       <div class="profile-card">
         <div class="image-container">
@@ -21,7 +26,7 @@
           <p id="professor-education"></p>
           <p id="professor-email"></p>
           <p id="professor-phone"></p>
-        </div>
+        </div><br>
       </div>
       <div class="total">
         <!-- Tabs Navigation -->
@@ -40,45 +45,46 @@
             <div class="session">
               <div>
                 <h3>Session 1</h3>
-                <p>Timings: 8:00 - 9:00</p>
+                <p><span class="sub-head">Timings:</span> 8:00 - 9:00</p>
                 <p>
-                  Description: This session will cover the basics of HTML and
+                  <span class="sub-head">Description:</span> This session will cover the basics of HTML and
+                  CSS, with hands-on practice.
+                </p>
+                <a href="#" class="session-link">Join Session</a>
+              </div>
+              
+              <div>
+                <h3>Session 1</h3>
+                <p><span class="sub-head">Timings:</span> 8:00 - 9:00</p>
+                <p>
+                  <span class="sub-head">Description:</span> This session will cover the basics of HTML and
                   CSS, with hands-on practice.
                 </p>
                 <a href="#" class="session-link">Join Session</a>
               </div>
               <div>
                 <h3>Session 1</h3>
-                <p>Timings: 8:00 - 9:00</p>
+                <p><span class="sub-head">Timings:</span> 8:00 - 9:00</p>
                 <p>
-                  Description: This session will cover the basics of HTML and
+                  <span class="sub-head">Description:</span> This session will cover the basics of HTML and
                   CSS, with hands-on practice.
                 </p>
                 <a href="#" class="session-link">Join Session</a>
               </div>
               <div>
                 <h3>Session 1</h3>
-                <p>Timings: 8:00 - 9:00</p>
+                <p><span class="sub-head">Timings:</span> 8:00 - 9:00</p>
                 <p>
-                  Description: This session will cover the basics of HTML and
+                  <span class="sub-head">Description:</span> This session will cover the basics of HTML and
                   CSS, with hands-on practice.
                 </p>
                 <a href="#" class="session-link">Join Session</a>
               </div>
               <div>
                 <h3>Session 1</h3>
-                <p>Timings: 8:00 - 9:00</p>
+                <p><span class="sub-head">Timings:</span> 8:00 - 9:00</p>
                 <p>
-                  Description: This session will cover the basics of HTML and
-                  CSS, with hands-on practice.
-                </p>
-                <a href="#" class="session-link">Join Session</a>
-              </div>
-              <div>
-                <h3>Session 1</h3>
-                <p>Timings: 8:00 - 9:00</p>
-                <p>
-                  Description: This session will cover the basics of HTML and
+                  <span class="sub-head">Description:</span> This session will cover the basics of HTML and
                   CSS, with hands-on practice.
                 </p>
                 <a href="#" class="session-link">Join Session</a>
@@ -88,10 +94,10 @@
 
           <!-- About Section -->
           <div class="section" id="about">
-            <h2>About</h2>
-            <p style="font-family: 'Poppins', sans-serif">
-              <br /><br />
-              I am a professor in the Department of [Department Name] at Sant
+            <h2 class="sub-title">About</h2>
+            <p style="font-family: 'Poppins', sans-serif; padding: 30px;">
+              
+              I'am a professor in the Department of [Department Name] at Sant
               Longowal Institute of Engineering and Technology (SLIET). With a
               Ph.D. in [Field of Study] from [University Name], my academic
               journey has been deeply rooted in both teaching and research.
@@ -111,8 +117,8 @@
 
           <!-- Expertise Section -->
           <div class="section" id="expertise">
-            <h2>Skills & Expertise</h2>
-            <div class="tags">
+            <h2 class="sub-title">Skills & Expertise</h2>
+            <div class="tags" style="padding: 30px;">
               <span class="tag">Mentoring</span>
               <span class="tag">Software development</span>
               <span class="tag">Software development life cycle (SDLC)</span>
@@ -135,18 +141,34 @@
 
           <!-- Reviews Section -->
           <div class="section" id="reviews">
-            <h2>Reviews</h2>
-            <p>
-              Here, users can find reviews from others about your sessions or
-              services.
-            </p>
+            <h2 class="sub-title">Reviews</h2>
+            <div class="review-container">
+              <div class="review-header">
+                  <img src="../images/user.png" alt="YouTube Logo" class="profile-img">
+                  <div class="reviewer-info">
+                      <p class="reviewer-name">Ananya</p>
+                      <img src="../images/rating-star.png" alt="Rating Star" class="rating-star">
+                  </div>
+              </div>
+              <p class="review-text">Amazing Teacher! Overall I gained more knowledge from him!..</p>
+          </div>  <br><hr>
+          <div class="review-container">
+            <div class="review-header">
+                <img src="../images/user.png" alt="YouTube Logo" class="profile-img">
+                <div class="reviewer-info">
+                    <p class="reviewer-name">Aravind</p>
+                    <img src="../images/rating-star.png" alt="Rating Star" class="rating-star">
+                </div>
+            </div>
+            <p class="review-text">Amazing Teacher! Overall I gained more knowledge from him!..</p>
+        </div>          
+          
           </div>
         </div>
       </div>
     </div>
 
-    <a href="index.html" class="back-btn">Back to Professors</a>
 
-    <script src="profile.js"></script>
+    <script src="../scripts/profile.js"></script>
   </body>
 </html>

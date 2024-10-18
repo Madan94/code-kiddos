@@ -1,3 +1,4 @@
+// Store all professor details in an array
 const professors = [
     {
         name: "Dr. Birmohan Singh",
@@ -130,44 +131,92 @@ const professors = [
     }
 ];
 
-// Function to fetch professor details by index
-function getProfessorDetails() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const professorIndex = urlParams.get('index');
-
-    if (professorIndex !== null && professors[professorIndex]) {
-        const professor = professors[professorIndex];
-        
-        // Display professor details
-        document.getElementById('professor-name').textContent = professor.name;
-        document.getElementById('professor-education').textContent = `Education: ${professor.education}`;
-        document.getElementById('professor-email').textContent = `Email: ${professor.email.join(', ')}`;
-        document.getElementById('professor-phone').textContent = `Phone: ${professor.phone}`;
-        document.getElementById('professor-image').src = professor.image;
-        document.getElementById('professor-image').alt = `${professor.name}'s profile picture`;
-    } else {
-        // Handle if professor is not found
-        document.querySelector('.profile-details').innerHTML = '<p>Professor not found</p>';
-    }
+// Function to search professors by name
+// Function to search professors by name
+function searchProfessors() {
+    const searchValue = document.getElementById('searchBar').value.toLowerCase();
+    const filteredProfessors = professors.filter(professor => 
+        professor.name.toLowerCase().includes(searchValue)
+    );
+    
+    displayProfessors(filteredProfessors);
 }
 
-// Call function on page load
-document.addEventListener('DOMContentLoaded', getProfessorDetails);
+// Modify displayProfessors to accept a filtered list (defaults to full professor list)
+function displayProfessors(professorList = professors) {
+    const container = document.querySelector('.container');
+    
+    // Clear previous content if any
+    container.innerHTML = '';
 
-// Get all the tabs and sections
-const tabs = document.querySelectorAll('.tab');
-const sections = document.querySelectorAll('.section');
+    // Iterate through the list of professors and create a card for each
+    professorList.forEach((professor, index) => {
+        // Create outer card div
+        const outercard = document.createElement('div');
+        outercard.classList.add('outer-card'); // Add outer-card class
 
-// Add event listener to each tab
-tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        // Remove 'active' class from all tabs and sections
-        tabs.forEach(t => t.classList.remove('active'));
-        sections.forEach(section => section.classList.remove('active'));
+        // Create inner card div
+        const card = document.createElement('div');
+        card.classList.add('card'); // Add card class
 
-        // Add 'active' class to the clicked tab and the corresponding section
-        tab.classList.add('active');
-        const targetSection = document.getElementById(tab.dataset.target);
-        targetSection.classList.add('active');
+        // Create a container for the image and overlay
+        const imageContainer = document.createElement('div');
+        imageContainer.classList.add('image-container');
+
+        // Create elements for each professor's details
+        const img = document.createElement('img');
+        img.src = professor.image;
+        img.alt = `${professor.name}'s profile picture`;
+        img.classList.add('mentor-image');
+
+        const infoOverlay = document.createElement('div');
+        infoOverlay.classList.add('info-overlay');
+
+        const name = document.createElement('h3');
+        name.textContent = professor.name;
+        name.classList.add('name-overlay'); // Add a class for styling
+
+        // Append the name to the overlay
+        infoOverlay.appendChild(name);
+
+        // Append the image and overlay to the image container
+        imageContainer.appendChild(img);
+        imageContainer.appendChild(infoOverlay);
+
+        // Create additional info for education, email, phone
+        const education = document.createElement('p');
+        education.innerHTML = `<span style="font-weight: bold;">Education:</span> ${professor.education}`;
+        education.classList.add('education');
+
+        const email = document.createElement('p');
+        email.innerHTML = `<span style="font-weight: bold;">Email:</span> ${professor.email.length > 0 ? professor.email.join(', ') : 'N/A'}`;
+        email.classList.add('email');
+
+        const phone = document.createElement('p');
+        phone.innerHTML = `<span style="font-weight: bold;">Phone:</span> ${professor.phone}`;
+        phone.classList.add('phone');
+
+        const button = document.createElement('a');
+        button.textContent = 'View Profile';
+        button.classList.add('profile-btn');
+        button.href = `profile.html?index=${index}`;  // Link to profile.html with query parameter
+
+        // Append the image container to the card
+        card.appendChild(imageContainer);
+        
+        // Append additional details to the card
+        card.appendChild(education);
+        card.appendChild(email);
+        card.appendChild(phone);
+        card.appendChild(button);
+
+        // Append the card to the outercard
+        outercard.appendChild(card);
+
+        // Append the outercard to the container
+        container.appendChild(outercard);
     });
-});
+}
+
+// Initially display all professors when the page loads
+document.addEventListener('DOMContentLoaded', () => displayProfessors(professors));

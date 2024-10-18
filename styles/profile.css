@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url('bg.jpeg'); /* Replace with the actual path to your image */
+    background-image: url('../images/bg.jpeg'); /* Replace with the actual path to your image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -22,7 +22,6 @@ body {
 
 .profile-card {
     width: 300px;
-    height: 400px;
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
@@ -46,6 +45,7 @@ body {
 .profile-details {
     margin-top: 20px;
     font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
 
 }
 
@@ -154,7 +154,8 @@ body {
 
 .tag:hover {
     transform: scale(1.05); /* Enlarge on hover */
-    background-color: #ff9238; /* Slightly darker background on hover */
+    background-color: #111827; /* Slightly darker background on hover */
+    color: white;
 }
 /* Card styles */
 .card {
@@ -217,6 +218,7 @@ body {
 .session p {
     font-size: 16px;
     color: #555;
+    text-align: justify;
 }
 
 /* Styling the join button */
@@ -233,10 +235,96 @@ body {
 
 /* Hover effect on the join button */
 .session-link:hover {
-    background-color: orange;
+    background-color: #111827;
+    color: white;
 }
 
 .total{
     max-width: 700px;
 }
 
+/* adding some minority styles */
+.sub-head{
+    color: #f56464;
+    font-weight: bold;
+}
+
+.sub-title{
+color: #fc8019; 
+text-decoration: underline;
+}
+/* Flexbox for the Rating Section */
+.rating-section-head {
+    font-size: larger;
+    font-weight: bold;
+    margin-left: 110px;
+    display: flex;
+    gap: 10px; /* Align text and image on opposite sides */
+    align-items: center; /* Vertically center the text and image */
+    padding: 10px; /* Add padding if necessary */
+}
+
+/* Star Icon Styling */
+.star-icon {
+    height: 25px; /* Set icon height */
+    width: 25px;  /* Set icon width */
+}
+
+/* Back link styling */
+.back-link {
+    position: fixed;
+    top: 20px;    /* Distance from the top */
+    left: 20px;   /* Distance from the left */
+    z-index: 100; /* Ensure it stays on top of other content */
+}
+
+/* Back icon styling */
+.back-icon {
+    width: 40px;   /* Adjust size of the icon */
+    height: 40px;
+    cursor: pointer; /* Make it clickable */
+}
+
+/* Container styling */
+.review-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/* Flex row between image and text */
+.review-header {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Adjust this value to control the space */
+    align-items: center;
+}
+
+/* Profile image */
+.profile-img {
+    height: 60px;
+    width: 60px;
+}
+
+/* Reviewer details */
+.reviewer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewer-name {
+    margin-top: 16px;
+    font-size: 1.25rem; /* Equivalent to text-xl */
+    font-weight: 600; /* Equivalent to font-semibold */
+}
+
+/* Rating star image */
+.rating-star {
+    height: 70px;
+    width: 70px;
+}
+
+/* Review text */
+.review-text {
+    margin-left: 80px; /* Equivalent to ml-20 */
+}
