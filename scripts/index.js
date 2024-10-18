@@ -31,11 +31,11 @@ const service_content = [
 
 function changeService(n) {
     const allElements = document.querySelectorAll(".our-service-title")
-    for(i=0; i<=3; i++){
-        if(i == n){
+    for (i = 0; i <= 3; i++) {
+        if (i == n) {
             allElements[i].classList.add('active')
         }
-        else{
+        else {
             allElements[i].classList.remove('active')
         }
     }
@@ -51,7 +51,6 @@ function changeService(n) {
         </div>
     `
     document.querySelector('.about-our-service').innerHTML = html
-}   
+}
 
 changeService(0)
-
