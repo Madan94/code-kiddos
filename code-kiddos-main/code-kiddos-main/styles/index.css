@@ -516,6 +516,37 @@ footer {
     margin-top: 20px;
 }
 
+@media (max-width: 768px) {
+    footer {
+        padding-top: 80px; /* Adjust top padding for mobile */
+        padding-left: 20px; /* Adjust left padding for mobile */
+        padding-right: 20px; /* Adjust right padding for mobile */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Stack sections vertically */
+        gap: 40px; /* Adjust gap for better spacing */
+    }
+
+    .social-icons {
+        justify-content: center; /* Center social icons */
+    }
+
+    .footer-links {
+        gap: 15px; /* Reduce gap for footer links */
+    }
+
+    .last-divider {
+        margin-top: 80px; /* Adjust margin for the last divider */
+        width: 80%; /* Adjust width for better fit */
+    }
+
+    .copyright {
+        margin-left: 0; /* Center copyright text */
+        text-align: center; /* Center text alignment */
+    }
+}
+
 /* we make it simple */
 /* General Styles */
 

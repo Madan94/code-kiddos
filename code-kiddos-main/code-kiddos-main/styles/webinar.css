@@ -267,6 +267,7 @@ body {
   background-color: #1c1c1c;
   /* Assuming this is the color from 'bg-c1' */
   padding: 0.5rem 2rem;
+  padding-top: 30px;
   /* Equivalent to px-8 */
   border-radius: 0.5rem;
   /* Equivalent to rounded-lg */
@@ -291,12 +292,148 @@ body {
   /* Equivalent to mt-10 */
 }
 
-@media (max-width: 800px) {
-  .top-link {
-    display: none;
+
+/* Base styles are for desktop view as default */
+
+/* Tablet (768px and below) */
+@media screen and (max-width: 900px) {
+  .faq-section {
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px auto;
+  }
+  .faq-img{
+    opacity: 0.3;
+  }
+  .faq-left {
+    padding: 20px;
+    border-radius: 15px 15px 0 0;
   }
 
-  .menubar {
-    display: block;
+  .faq-right {
+    padding: 20px;
+  }
+
+  .webinars-container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .next-webinars-title {
+    font-size: 2.5rem;
+    /* Reduced size for tablets */
+  }
+
+  .webinar-item {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .webinar-details {
+    margin-top: 1rem;
+  }
+
+  .date-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.75rem;
+  }
+
+  .date-number {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .date-month-year {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: gray;
+  }
+  .date-month-year p{
+    font-size: 30px;
+  }
+
+
+  .webinar-title {
+    font-size: 1.75rem;
+  }
+
+  .webinar-time {
+    font-size: 1rem;
+  }
+
+  .register-button {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+}
+
+/* Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+  .faq-left {
+    padding: 15px;
+    position: relative;
+}
+
+/* Shrink and make the image more transparent on mobile */
+.faq-left img {
+    max-width: 80%;
+    opacity: 0.3; /* Increase transparency */
+    top: 10%;
+    transform: translateX(-50%);
+}
+
+/* Ensure text is clearly visible over the image */
+.faq-left h1,
+.faq-left p {
+    z-index: 3;
+    position: relative;
+    color: #333; /* Darken the text for better contrast */
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5); /* Add text-shadow for visibility */
+}
+
+  .next-webinars-title {
+    font-size: 2rem;
+  }
+
+  .webinar-item {
+    flex-direction: column;
+    margin-top: 0.5rem;
+  }
+
+  .date-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .date-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+
+  .date-month-year {
+    font-size: 1rem;
+  }
+
+  .webinar-title {
+    font-size: 1.5rem;
+  }
+
+  .webinar-time {
+    font-size: 0.875rem;
+  }
+
+  .register-button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    margin-top: 20px;
   }
 }
