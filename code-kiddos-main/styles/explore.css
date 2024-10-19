@@ -10,6 +10,7 @@ body {
     background: linear-gradient(150deg, #fcd9bd, #fff7e0, #2b354b);
     /* background: url(../images//bg.svg); */
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 /* Style for the entire navbar */
