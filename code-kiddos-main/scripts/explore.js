@@ -108,7 +108,7 @@ const professors = [
     {
         name: "Sukhpreet Singh",
         education: "B.Tech, M.Tech, Ph.D (Pursuing)",
-        email: ['sukhpreet.manshahia@gmail.com'],
+        email: ['sukhpreet .manshahia@gmail.com'],
         phone: "",
         image: "http://sliet.ac.in/wp-content/uploads/avatars/353/60544f9339252-bpfull.jpg"
     },
@@ -185,7 +185,7 @@ function displayProfessors(professorList = professors) {
 
         // Create additional info for education, email, phone
         const education = document.createElement('p');
-        education.innerHTML = `<span style="font-weight: bold;">Education:</span> ${professor.education}`;
+        education.innerHTML = `<span style="font-weight: bold;">Education:</span> ${professor.education.slice(0,25)}...`;
         education.classList.add('education');
 
         const email = document.createElement('p');
@@ -193,7 +193,7 @@ function displayProfessors(professorList = professors) {
         email.classList.add('email');
 
         const phone = document.createElement('p');
-        phone.innerHTML = `<span style="font-weight: bold;">Phone:</span> ${professor.phone}`;
+        phone.innerHTML = `<span style="font-weight: bold;">Phone:</span> ${professor.phone || 'N/A'}`;
         phone.classList.add('phone');
 
         const button = document.createElement('a');

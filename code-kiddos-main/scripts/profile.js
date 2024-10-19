@@ -192,7 +192,7 @@ function updateSessionSection(professor) {
   // Update the session section with the professor's name and image
   const sessionHeader = `
       <div class="session-header">
-        <img src="${professor.image}" alt="${professor.name}'s image" class="professor-photo">
+        <img src="../images/work.avif" alt="${professor.name}'s image" class="professor-photo">
         <div class="session-info">
           <h3>${professor.name}</h3>
           <p><span class="sub-head">Session Description:</span> Join us for a focused lecture on Algorithms and Data Structures, essential concepts in Computer Science. This session will cover the fundamentals of how algorithms work and the importance of data structures in optimizing performance. You'll learn how to choose the right data structure for specific problems and explore classic algorithms such as sorting and searching. This lecture is perfect for anyone looking to strengthen their programming skills and improve their problem-solving capabilities in real-world applications.</p>

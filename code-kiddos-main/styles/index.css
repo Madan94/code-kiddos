@@ -2,6 +2,8 @@
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
     margin: 0;
+    overflow-x: hidden;
+    scrollbar-width: none;
 }
 
 body {
@@ -18,7 +20,13 @@ p {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background-color: #f5f5f5; /* Light gray background */
+    background-color: #f5f5f5;
+    /* Light gray background */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border: 3px solid #eeeeee;
+    box-shadow: 1px 1px 20px #eeeeee;
 }
 
 .brand {
@@ -49,12 +57,16 @@ p {
 
 /* Special styling for "Explore Mentor" button */
 .nav-link[href="explore.html"] {
-    background-color: #ff6b3c; /* Vibrant orange background */
+    background-color: #ff6b3c;
+    /* Vibrant orange background */
     color: white;
     font-weight: bold;
-    padding: 12px 25px; /* Slightly bigger padding */
-    border-radius: 30px; /* Rounded corners */
-    box-shadow: 0 8px 20px rgba(255, 107, 60, 0.5), 0 0 15px rgba(255, 107, 60, 0.8); /* Initial glow */
+    padding: 12px 25px;
+    /* Slightly bigger padding */
+    border-radius: 30px;
+    /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(255, 107, 60, 0.5), 0 0 15px rgba(255, 107, 60, 0.8);
+    /* Initial glow */
     transition: all 0.4s ease;
     font-size: 18px;
     position: relative;
@@ -62,9 +74,12 @@ p {
 
 /* Stronger hover effect for "Explore Mentor" */
 .nav-link[href="explore.html"]:hover {
-    background-color: #e65a29; /* Darker orange */
-    box-shadow: 0 12px 30px rgba(255, 107, 60, 0.9), 0 0 20px rgba(255, 107, 60, 1); /* Stronger glow */
-    transform: scale(1.1); /* Bigger zoom effect */
+    background-color: #e65a29;
+    /* Darker orange */
+    box-shadow: 0 12px 30px rgba(255, 107, 60, 0.9), 0 0 20px rgba(255, 107, 60, 1);
+    /* Stronger glow */
+    transform: scale(1.1);
+    /* Bigger zoom effect */
 }
 
 /* Enhanced Pulse Animation for "Explore Mentor" */
@@ -72,21 +87,25 @@ p {
     0% {
         box-shadow: 0 0 0 0 rgba(255, 107, 60, 0.7), 0 0 15px rgba(255, 107, 60, 0.7);
     }
+
     50% {
         box-shadow: 0 0 25px 25px rgba(255, 107, 60, 0), 0 0 30px rgba(255, 107, 60, 0.5);
     }
+
     100% {
         box-shadow: 0 0 0 0 rgba(255, 107, 60, 0.7), 0 0 15px rgba(255, 107, 60, 0.7);
     }
 }
 
 .nav-link[href="explore.html"] {
-    animation: pulse 1.5s infinite; /* Faster and stronger pulse */
+    animation: pulse 1.5s infinite;
+    /* Faster and stronger pulse */
 }
 
 /* Style for active button (optional, to indicate the current page) */
 .nav-link.active {
-    background-color: #ff6b3c; /* Same as Explore Mentor to highlight the active page */
+    background-color: #ff6b3c;
+    /* Same as Explore Mentor to highlight the active page */
     color: white;
     font-weight: bold;
     box-shadow: 0 6px 15px rgba(255, 107, 60, 0.6);
@@ -258,6 +277,8 @@ p {
 
 .about-our-service {
     display: flex;
+    justify-content: center;
+    align-items: start;
     flex-wrap: wrap;
     column-gap: 20px;
     align-self: center;
@@ -285,25 +306,31 @@ p {
 
 .container {
     display: flex;
+    justify-content: center;
     flex-direction: row;
+    flex-wrap: wrap;
     animation: load;
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
 }
 
-.image-container {
-    width: 45%;
-    margin-left: 40px;
+.mentorship-container {
+    display: flex;
+    justify-content: center;
+    column-gap: 100px;
+    flex-wrap: wrap;
+    animation: load;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
 
 .image-container img {
     height: 600px;
-    width: 600px;
 }
 
 .text-container {
-    width: 50%;
-    margin-top: 70px;
+    /* width: 50%; */
+    margin-top: 50px;
 }
 
 .section-title {
@@ -311,14 +338,14 @@ p {
     font-size: 1.25rem;
     font-weight: 500;
     margin-bottom: 5px;
-   
+
 }
 
 .main-title {
     font-size: 2.5rem;
     font-weight: bold;
     margin-top: 0;
-   
+
 }
 
 
@@ -331,7 +358,7 @@ p {
     font-size: 1.25rem;
     font-weight: 200;
     margin-bottom: 20px;
-    
+
 }
 
 .steps-container {
@@ -339,7 +366,7 @@ p {
     flex-direction: column;
     gap: 5px;
     margin-top: 20px;
-    
+
 }
 
 .step {
@@ -470,68 +497,70 @@ footer {
 /* Text Styles */
 .highlight-text {
     background-color: #edf5ff;
-    border-radius: 1.5rem; 
+    border-radius: 1.5rem;
     font-size: 0.875rem;
-    padding: 0.5rem; 
-    font-weight: 500; 
-    width: 13rem; 
-    text-align: center; 
+    padding: 0.5rem;
+    font-weight: 500;
+    width: 13rem;
+    text-align: center;
 }
 
 .title {
-    font-size: 3rem; 
-    font-weight: bold; 
-    text-align: center; 
-    margin-top: 1rem; 
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
 }
 
 .subtitle {
-    font-size: 1.125rem; 
-    font-weight: 300; 
-    text-align: center; 
-    margin-top: 1rem; 
+    font-size: 1.125rem;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 1rem;
 }
 
 /* Grid Container */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 2.5rem; 
-    margin-top: 3.5rem; 
-    margin-left: 5rem; 
-    margin-right: 5rem; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3.5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 
 /* Feature Item Styles */
 .feature-item {
     display: flex;
-    flex-direction: column; 
-    gap: 1.25rem; 
+    flex-direction: column;
+    gap: 1.25rem;
     padding: 3.25rem;
-    background-color: #ffffff; 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
-    border-radius: 0.5rem; 
-    text-align: center; 
-    transition: background-color 0.3s ease; 
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
     animation: fade;
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
 }
 
 .feature-item:hover {
-    background-color: #fcd9bd; 
+    background-color: #fcd9bd;
 }
 
 /* Icon Styles */
 .icon {
-    font-size: 5rem; 
+    font-size: 5rem;
 }
+
 .feature-title {
-    font-size: 1.25rem; 
-    font-weight: bold; 
+    font-size: 1.25rem;
+    font-weight: bold;
 }
+
 .feature-description {
-    color: #4b5563; 
+    color: #4b5563;
 }
 
 
@@ -566,3 +595,5 @@ footer {
         clip-path: inset(0 0 0 0);
     }
 }
+
+@media only screen and (max-width: 730) {}

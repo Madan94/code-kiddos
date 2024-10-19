@@ -3,25 +3,36 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url('../images/bg.svg'); /* Replace with the actual path to your image */
+    background-image: url('../images/bg.svg');
+    /* Replace with the actual path to your image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
 }
 
 
 
 .profile-container {
+    margin-top: 100px;
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
     justify-content: space-around;
-    align-items: center;
+    /* align-items: center; */
+    align-items: start;
     height: 100vh;
     padding: 20px;
     box-sizing: border-box;
 }
 
 .profile-card {
-    width: 400px;
+    width: 300px;
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
@@ -34,19 +45,19 @@ body {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    margin-top: -100px;
+    /* margin-top: -100px; */
     transition: transform 0.3s ease;
 }
 
 .mentor-image:hover {
-    transform: scale(1.05); /* Enlarge the image on hover */
+    transform: scale(1.05);
+    /* Enlarge the image on hover */
 }
 
 .profile-details {
     margin-top: 20px;
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
-
 }
 
 .back-btn {
@@ -84,15 +95,15 @@ body {
 .tabs {
     display: flex;
     justify-content: space-around;
-    background-color: #f56464;
+    background-color: white;
     border-radius: 8px;
     padding: 10px;
     margin-bottom: 30px;
-    
+
 }
 
 .tab {
-    color: white;
+    color: #111827;
     padding: 10px 20px;
     cursor: pointer;
 }
@@ -100,6 +111,7 @@ body {
 .tab.active {
     background-color: #ff0066;
     border-radius: 5px;
+    color: white;
 }
 
 /* Sessions Container */
@@ -116,18 +128,28 @@ body {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    background-color: #f9f9f9; /* Light background color */
+    background-color: #f9f9f9;
+    /* Light background color */
     padding: 20px;
-    border-radius: 8px; /* Rounded corners */
-    max-width: 800px; /* Limit the width */
-    margin: 20px auto; /* Center the section */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px;
+    /* Rounded corners */
+    max-width: 800px;
+    /* Limit the width */
+    margin: 20px auto;
+    /* Center the section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
 }
+
 .section h2 {
-    margin-bottom: 15px; /* Space below the heading */
-    font-size: 24px; /* Font size */
-    text-align: center; /* Centered text */
+    margin-bottom: 15px;
+    /* Space below the heading */
+    font-size: 24px;
+    /* Font size */
+    text-align: center;
+    /* Centered text */
 }
+
 .section.active {
     display: block;
 }
@@ -137,26 +159,39 @@ body {
     display: flex;
     gap: 20px;
 }
+
 .tags {
-    display: flex; /* Use flexbox */
-    flex-wrap: wrap; /* Allow wrapping */
-    gap: 10px; /* Space between tags */
-    justify-content: center; /* Center tags */
+    display: flex;
+    /* Use flexbox */
+    flex-wrap: wrap;
+    /* Allow wrapping */
+    gap: 10px;
+    /* Space between tags */
+    justify-content: center;
+    /* Center tags */
 }
 
 .tag {
-    background-color: #e0e0e0; /* Background color for tags */
-    border-radius: 5px; /* Rounded corners for tags */
-    padding: 10px 15px; /* Padding for tags */
-    font-size: 14px; /* Font size for tags */
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    background-color: #e0e0e0;
+    /* Background color for tags */
+    border-radius: 5px;
+    /* Rounded corners for tags */
+    padding: 10px 15px;
+    /* Padding for tags */
+    font-size: 15px;
+    /* Font size for tags */
+    transition: transform 0.3s ease;
+    /* Smooth transition for hover effect */
 }
 
 .tag:hover {
-    transform: scale(1.05); /* Enlarge on hover */
-    background-color: #111827; /* Slightly darker background on hover */
+    transform: scale(1.05);
+    /* Enlarge on hover */
+    background-color: #111827;
+    /* Slightly darker background on hover */
     color: white;
 }
+
 /* Card styles */
 .card {
     background-color: white;
@@ -180,147 +215,138 @@ body {
     font-size: 14px;
     color: #555;
 }
+
 /* Parent div styling */
-/* Styling for the session container */
 .session {
     display: flex;
     flex-direction: column;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    flex-wrap: wrap;
+    /* Ensures the sessions wrap to the next line if needed */
+    justify-content: space-between;
+    /* Add space between session cards */
+    gap: 20px;
+    /* Adds a gap between each session card */
     padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Flexbox layout for session header (image + text) */
-  .session-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-  }
-  
-  /* Styling for the professor's photo */
-  .professor-photo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-right: 20px;
-    object-fit: cover;
-  }
-  
-  /* Styling for the session information (name, description) */
-  .session-info {
-    flex-grow: 1;
-  }
-  
-  .session-info h3 {
-    margin: 0;
+    /* Padding around the parent container */
+    background-color: #f9f9f9;
+    /* Optional: light background for the container */
+}
+
+.professor-photo{
+    width: 200px;
+}
+
+/* Child div styling */
+.session>div {
+    flex: 1 1 30%;
+    /* Ensures each session takes up around 30% of the container width */
+    padding: 20px;
+    background-color: #fff;
+    /* White background for each session */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Slight shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    /* Centers the text inside each session */
+}
+
+/* Hover effect on each session */
+.session>div:hover {
+    transform: scale(1.05);
+    /* Enlarges on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    /* Increases shadow on hover */
+}
+
+/* Styling the session title */
+.session h3 {
     font-size: 20px;
-    font-weight: 600;
+    margin-bottom: 10px;
     color: #333;
-  }
-  
-  .session-info p {
-    margin-top: 8px;
+}
+
+/* Styling the session description */
+.session p {
     font-size: 16px;
-    color: #666;
-  }
-  
-/* Session Link Button Styles */
-/* Session Link Button Styles */
+    color: #555;
+    text-align: justify;
+}
+
+/* Styling the join button */
 .session-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #fc8019;
+    color: white;
     text-decoration: none;
-    color: #111827;
-    font-weight: 400;
-    font-size: 22px;
-    transition: .2s;
-    display: inline-block; /* Make the button inline-block for padding */
-    padding: 10px 20px; /* Add some padding for a better button shape */
-    background-color: #f56464; /* Main button color */
-    color: white; /* Text color */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Slightly rounded corners */
-    text-decoration: none; /* Remove underline from links */
-    font-size: 16px; /* Font size for better readability */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    animation: pulse 1.5s infinite; /* Enhanced pulse animation */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    align-self: center;
 }
 
-/* Hover Effect */
+/* Hover effect on the join button */
 .session-link:hover {
-    background-color: #e65a29; /* Darker orange on hover */
-    box-shadow: 0 12px 30px rgba(255, 107, 60, 0.9), 0 0 20px rgba(255, 107, 60, 1); /* Stronger glow */
-    transform: scale(1.1); /* Bigger zoom effect */
+    background-color: #111827;
+    color: white;
 }
 
-/* Enhanced Pulse Animation */
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(255, 107, 60, 0.7), 0 0 15px rgba(255, 107, 60, 0.7);
-    }
-    50% {
-        box-shadow: 0 0 25px 25px rgba(255, 107, 60, 0), 0 0 30px rgba(255, 107, 60, 0.5);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(255, 107, 60, 0.7), 0 0 15px rgba(255, 107, 60, 0.7);
-    }
-}
-
-/* Active Button Style */
-.session-link.active {
-    background-color: #ff6b3c; /* Highlight active page */
-    color: white; /* Keep text color white */
-    font-weight: bold; /* Bold text for emphasis */
-    box-shadow: 0 6px 15px rgba(255, 107, 60, 0.6); /* Shadow for active state */
-}
-
-
-
-.total{
+.total {
     max-width: 700px;
 }
 
 /* adding some minority styles */
-.sub-head{
+.sub-head {
     color: #f56464;
     font-weight: bold;
 }
 
-.sub-title{
-color: #fc8019; 
-text-decoration: underline;
+.sub-title {
+    color: #fc8019;
+    text-decoration: underline;
 }
+
 /* Flexbox for the Rating Section */
 .rating-section-head {
     font-size: larger;
     font-weight: bold;
     margin-left: 110px;
     display: flex;
-    gap: 10px; /* Align text and image on opposite sides */
-    align-items: center; /* Vertically center the text and image */
-    padding: 10px; /* Add padding if necessary */
+    gap: 10px;
+    /* Align text and image on opposite sides */
+    align-items: center;
+    /* Vertically center the text and image */
+    padding: 10px;
+    /* Add padding if necessary */
 }
 
 /* Star Icon Styling */
 .star-icon {
-    height: 25px; /* Set icon height */
-    width: 25px;  /* Set icon width */
+    height: 25px;
+    /* Set icon height */
+    width: 25px;
+    /* Set icon width */
 }
 
 /* Back link styling */
 .back-link {
     position: fixed;
-    top: 20px;    /* Distance from the top */
-    left: 20px;   /* Distance from the left */
-    z-index: 100; /* Ensure it stays on top of other content */
+    top: 20px;
+    /* Distance from the top */
+    left: 20px;
+    /* Distance from the left */
+    z-index: 100;
+    /* Ensure it stays on top of other content */
 }
 
 /* Back icon styling */
 .back-icon {
-    width: 40px;   /* Adjust size of the icon */
+    width: 40px;
+    /* Adjust size of the icon */
     height: 40px;
-    cursor: pointer; /* Make it clickable */
+    cursor: pointer;
+    /* Make it clickable */
 }
 
 /* Container styling */
@@ -334,7 +360,8 @@ text-decoration: underline;
 .review-header {
     display: flex;
     flex-direction: row;
-    gap: 20px; /* Adjust this value to control the space */
+    gap: 20px;
+    /* Adjust this value to control the space */
     align-items: center;
 }
 
@@ -352,8 +379,10 @@ text-decoration: underline;
 
 .reviewer-name {
     margin-top: 16px;
-    font-size: 1.25rem; /* Equivalent to text-xl */
-    font-weight: 600; /* Equivalent to font-semibold */
+    font-size: 1.25rem;
+    /* Equivalent to text-xl */
+    font-weight: 600;
+    /* Equivalent to font-semibold */
 }
 
 /* Rating star image */
@@ -364,5 +393,6 @@ text-decoration: underline;
 
 /* Review text */
 .review-text {
-    margin-left: 80px; /* Equivalent to ml-20 */
+    margin-left: 80px;
+    /* Equivalent to ml-20 */
 }
