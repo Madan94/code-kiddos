@@ -66,3 +66,11 @@ function toggleChat() {
         chatbox.style.display = 'none'; // Hide the chatbox
     }
 }
+
+function openNav(){
+    document.querySelector('.sidebar').style.width = "auto"
+}
+
+function closeNav(){
+    document.querySelector('.sidebar').style.width = "0"
+}

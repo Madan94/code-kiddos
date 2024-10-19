@@ -120,8 +120,8 @@ const professors = [
         phone: "9915025805",
         image: "http://sliet.ac.in/wp-content/uploads/avatars/477/605067c46b9c6-bpfull.jpg"
     },
-  
-   
+
+
     {
         name: "Sunita Rani",
         education: "Ph.D(Pursuing),M.Tech,B.Tech",
@@ -135,17 +135,17 @@ const professors = [
 // Function to search professors by name
 function searchProfessors() {
     const searchValue = document.getElementById('searchBar').value.toLowerCase();
-    const filteredProfessors = professors.filter(professor => 
+    const filteredProfessors = professors.filter(professor =>
         professor.name.toLowerCase().includes(searchValue)
     );
-    
+
     displayProfessors(filteredProfessors);
 }
 
 // Modify displayProfessors to accept a filtered list (defaults to full professor list)
 function displayProfessors(professorList = professors) {
     const container = document.querySelector('.container');
-    
+
     // Clear previous content if any
     container.innerHTML = '';
 
@@ -185,7 +185,7 @@ function displayProfessors(professorList = professors) {
 
         // Create additional info for education, email, phone
         const education = document.createElement('p');
-        education.innerHTML = `<span style="font-weight: bold;">Education:</span> ${professor.education.slice(0,25)}...`;
+        education.innerHTML = `<span style="font-weight: bold;">Education:</span> ${professor.education.slice(0, 25)}...`;
         education.classList.add('education');
 
         const email = document.createElement('p');
@@ -203,7 +203,7 @@ function displayProfessors(professorList = professors) {
 
         // Append the image container to the card
         card.appendChild(imageContainer);
-        
+
         // Append additional details to the card
         card.appendChild(education);
         card.appendChild(email);
@@ -220,3 +220,12 @@ function displayProfessors(professorList = professors) {
 
 // Initially display all professors when the page loads
 document.addEventListener('DOMContentLoaded', () => displayProfessors(professors));
+
+
+function openNav() {
+    document.querySelector('.sidebar').style.width = "auto"
+}
+
+function closeNav() {
+    document.querySelector('.sidebar').style.width = "0"
+}
