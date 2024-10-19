@@ -267,8 +267,6 @@ body {
   background-color: #1c1c1c;
   /* Assuming this is the color from 'bg-c1' */
   padding: 0.5rem 2rem;
-  padding-top: 30px;
-  /* Equivalent to px-8 */
   border-radius: 0.5rem;
   /* Equivalent to rounded-lg */
   color: white;
@@ -369,6 +367,7 @@ body {
     width: 100%;
     text-align: center;
     padding-bottom: 30px;
+
   }
 }
 
@@ -432,8 +431,8 @@ body {
   }
 
   .register-button {
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem;
     font-size: 1rem;
-    margin-top: 20px;
+    padding-bottom: 30px;
   }
 }
