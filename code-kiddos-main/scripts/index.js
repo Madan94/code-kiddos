@@ -66,3 +66,14 @@ function toggleChat() {
         chatbox.style.display = 'none'; // Hide the chatbox
     }
 }
+
+
+// Navbar Toggle Section 
+
+let navbar=document.getElementById("nav-icon");
+let navlist=document.getElementById("nav-list");
+
+navbar.addEventListener("click",function(){
+  navlist.classList.toggle("display");
+})
+

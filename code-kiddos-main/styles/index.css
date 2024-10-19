@@ -1,13 +1,16 @@
 * {
-    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
     margin: 0;
+    padding:0;
     overflow-x: hidden;
     scrollbar-width: none;
 }
 
 body {
     background-color: #f7f7f7;
+    padding:0;
+    margin:0;
+    font-family: "Poppins", sans-serif;
 }
 
 p {
@@ -35,14 +38,14 @@ p {
     color: #333;
 }
 
-.nav-links-section {
+.nav-list {
     display: flex;
     align-items: center;
     justify-content: center;
     column-gap: 40px;
 }
 
-.nav-links-section .nav-link {
+.nav-list .nav-link {
     text-decoration: none;
     color: #111827;
     font-weight: 400;
@@ -286,6 +289,14 @@ p {
 
 }
 
+#nav-icon{
+    display:none;
+}
+
+#nav-icon i{
+    font-size:30px;
+}
+
 .service-content-main {
     display: flex;
     flex-direction: column;
@@ -301,8 +312,6 @@ p {
 .service-img {
     width: 500px;
 }
-
-
 
 .container {
     display: flex;
@@ -322,6 +331,12 @@ p {
     animation: load;
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    order:2;
 }
 
 .image-container img {
@@ -596,4 +611,306 @@ footer {
     }
 }
 
-@media only screen and (max-width: 730) {}
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    /* General container padding for tablets */
+    .container, .hero-section {
+        margin: 0 30px;
+    }
+
+    /* Adjust hero section text and image */
+    .hero-content {
+        width: 100%;
+    }
+    
+    .hero-img {
+        width: 500px;
+    }
+
+    .our-products {
+        width: 100%;
+    }
+
+    .our-products-list {
+        justify-content: center;
+    }
+
+    .single-product-card {
+        min-width: 120px;
+        min-height: 150px;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Navbar adjustments */
+    .nav-links-section {
+        column-gap: 20px;
+    }
+
+    .nav-link {
+        font-size: 18px;
+    }
+
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    /* Hero section font sizes for tablets */
+    .hero-head {
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+
+    .content {
+        font-size: 20px;
+    }
+
+    .hero-img {
+        width: 450px;
+    }
+
+    .find-section {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .find-mentor, .explore-more {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Service section responsive */
+    .our-service-navbar {
+        width: 100%;
+        font-size: 18px;
+        padding: 10px 0;
+    }
+
+    .about-our-service {
+        margin: auto 20px;
+    }
+
+    .service-content-main {
+        width: 100%;
+    }
+
+    .service-img {
+        width: 100%;
+    }
+
+    /* Grid adjustments */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin: 0 20px;
+    }
+
+    .feature-item {
+        padding: 2rem;
+    }
+
+    .feature-title {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navbar adjustments for mobile */
+
+    #nav-icon{
+        display:block;
+    }
+
+    .nav-logo{
+        display: flex;
+        width:100%;
+        justify-content: space-around;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        row-gap: 15px;
+        padding: 10px 0;
+        display: none;
+    }
+
+    .brand {
+        font-size: 22px;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    /* Hero section for mobile */
+    .hero-section {
+        flex-direction: column;
+        margin: 0 20px;
+    }
+
+    .hero-head {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .content {
+        font-size: 18px;
+    }
+
+    .hero-img {
+        width: 350px;
+        margin: 20px auto;
+    }
+
+    /* Product cards */
+    .single-product-card {
+        min-width: 120px;
+        min-height: 140px;
+    }
+
+    .our-products-list {
+        justify-content: flex-start;
+        padding: 10px 0;
+    }
+
+    .find-section {
+        flex-direction: column;
+        row-gap: 15px;
+    }
+
+    .find-mentor, .explore-more {
+        width: 100%;
+    }
+
+    /* Footer adjustments */
+    .footer-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Mobile-first adjustments */
+    body {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .nav-logo{
+        display: flex;
+        width:100%;
+        justify-content: space-around;
+    }
+
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    /* Hero section mobile adjustments */
+    .hero-head {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .content {
+        font-size: 16px;
+    }
+
+    .hero-img {
+        width: 100%;
+    }
+
+    /* Product cards mobile */
+    .single-product-card {
+        min-width: 100px;
+        min-height: 120px;
+    }
+
+    .our-products-list {
+        justify-content: flex-start;
+    }
+
+    /* Mobile grid adjustments */
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin: 10px 10px;
+        justify-content: center;
+
+    }
+
+    .feature-item {
+        padding: 1.5rem;
+    }
+
+    .feature-title {
+        font-size: 1rem;
+    }
+
+    /* Footer mobile adjustments */
+    .footer-container {
+        padding-left: 20px;
+    }
+
+    .footer-section {
+        gap: 10px;
+    }
+
+    .social-icons img {
+        height: 20px;
+        width: 20px;
+    }
+
+    .copyright {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    /* Extra small screens adjustments */
+    .hero-head {
+        font-size: 20px;
+    }
+
+    .content {
+        font-size: 14px;
+    }
+
+    .nav-logo{
+        display: flex;
+        width:100%;
+        justify-content: space-around;
+    }
+
+    .find-mentor, .explore-more {
+        font-size: 14px;
+    }
+
+    .footer-container {
+        padding-left: 10px;
+    }
+
+    .footer-title {
+        font-size: 1rem;
+    }
+
+    .social-icons img {
+        height: 18px;
+        width: 18px;
+    }
+}
+
+
