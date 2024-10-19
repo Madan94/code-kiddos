@@ -10,26 +10,35 @@ body {
     background: linear-gradient(150deg, #fcd9bd, #fff7e0, #2b354b);
     /* background: url(../images//bg.svg); */
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
-/* styling navbar */
+/* Style for the entire navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
     background-color: #f5f5f5;
-    position: sticky;
+    /* Light gray background */
+    position: fixed;
     top: 0;
-    z-index: 100;
+    left: 0;
+    right: 0;
+    z-index: 500;
     border: 3px solid #eeeeee;
     box-shadow: 1px 1px 20px #eeeeee;
 }
 
 .brand {
-    color: #fc8019;
-    font-weight: 400;
-    font-size: 22px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.menubar {
+    display: none;
+    cursor: pointer;
 }
 
 .nav-links-section {
@@ -39,7 +48,7 @@ body {
     column-gap: 40px;
 }
 
-.nav-links-section .nav-link {
+.nav-link {
     text-decoration: none;
     color: #111827;
     font-weight: 400;
@@ -51,16 +60,71 @@ body {
     color: #fc8019;
 }
 
+
+/* Special styling for "Explore Mentor" button */
 .nav-link[href="explore.html"] {
     background-color: #ff6b3c;
+    /* Vibrant orange background */
     color: white;
     font-weight: bold;
     padding: 12px 25px;
-    border-radius: 30px;
+    /* Rounded corners */
     box-shadow: 0 8px 20px rgba(255, 107, 60, 0.5), 0 0 15px rgba(255, 107, 60, 0.8);
-    transition: all 0.4s ease;
+    /* Initial glow */
     font-size: 18px;
+
+}
+
+/* Stronger hover effect for "Explore Mentor" */
+.nav-link[href="explore.html"]:hover {
+    background-color: #e65a29;
+    /* Darker orange */
+    box-shadow: 0 12px 30px rgba(255, 107, 60, 0.9), 0 0 20px rgba(255, 107, 60, 1);
+    /* Stronger glow */
+    transform: scale(1.1);
+    /* Bigger zoom effect */
+}
+
+
+
+
+/* Style for active button (optional, to indicate the current page) */
+.nav-link.active {
+    background-color: #ff6b3c;
+    /* Same as Explore Mentor to highlight the active page */
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(255, 107, 60, 0.6);
+}
+
+.sidebar {
+    position: fixed;
+    z-index: 200;
+    border-right: 1px solid #111827;
+    height: 100%;
+    background-color: #f4f4f4;
+    width: 0;
+    transition: 1s;
+    overflow: hidden;
+    top: 0;
+}
+
+.sidebar-links {
+    margin-top: 100px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 300px;
     position: relative;
+}
+
+.closemenu {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 30px;
 }
 
 /* Style for the video background */
@@ -202,6 +266,7 @@ body {
     justify-content: space-around;
     width: 400px;
     margin: 30px auto;
+    margin-top: 100px;
 }
 
 #searchBar {
@@ -217,4 +282,45 @@ body {
 
 #searchBar:focus {
     border-color: #fc8019;
+}
+
+/* animation */
+
+@keyframes load {
+    from {
+        opacity: 0;
+        scale: 0.5;
+        clip-path: inset(0 100% 0 0);
+        filter: grayscale(100%);
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+        clip-path: inset(0 0 0 0);
+        filter: grayscale(0);
+    }
+}
+
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        clip-path: inset(0 0 0 100%);
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@media (max-width: 800px) {
+    .top-link {
+        display: none;
+    }
+
+    .menubar {
+        display: block;
+    }
 }

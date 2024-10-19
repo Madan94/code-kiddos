@@ -1,13 +1,16 @@
 * {
-    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
     margin: 0;
+    padding:0;
     overflow-x: hidden;
     scrollbar-width: none;
 }
 
 body {
     background-color: #f7f7f7;
+    padding:0;
+    margin:0;
+    font-family: "Poppins", sans-serif;
 }
 
 p {
@@ -22,9 +25,10 @@ p {
     padding: 15px 30px;
     background-color: #f5f5f5;
     /* Light gray background */
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 500;
     border: 3px solid #eeeeee;
     box-shadow: 1px 1px 20px #eeeeee;
 }
@@ -35,6 +39,11 @@ p {
     color: #333;
 }
 
+.menubar{
+    display: none;
+    cursor: pointer;
+}
+
 .nav-links-section {
     display: flex;
     align-items: center;
@@ -42,7 +51,7 @@ p {
     column-gap: 40px;
 }
 
-.nav-links-section .nav-link {
+.nav-link {
     text-decoration: none;
     color: #111827;
     font-weight: 400;
@@ -62,14 +71,11 @@ p {
     color: white;
     font-weight: bold;
     padding: 12px 25px;
-    /* Slightly bigger padding */
-    border-radius: 30px;
     /* Rounded corners */
     box-shadow: 0 8px 20px rgba(255, 107, 60, 0.5), 0 0 15px rgba(255, 107, 60, 0.8);
     /* Initial glow */
-    transition: all 0.4s ease;
     font-size: 18px;
-    position: relative;
+
 }
 
 /* Stronger hover effect for "Explore Mentor" */
@@ -82,25 +88,8 @@ p {
     /* Bigger zoom effect */
 }
 
-/* Enhanced Pulse Animation for "Explore Mentor" */
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(255, 107, 60, 0.7), 0 0 15px rgba(255, 107, 60, 0.7);
-    }
 
-    50% {
-        box-shadow: 0 0 25px 25px rgba(255, 107, 60, 0), 0 0 30px rgba(255, 107, 60, 0.5);
-    }
 
-    100% {
-        box-shadow: 0 0 0 0 rgba(255, 107, 60, 0.7), 0 0 15px rgba(255, 107, 60, 0.7);
-    }
-}
-
-.nav-link[href="explore.html"] {
-    animation: pulse 1.5s infinite;
-    /* Faster and stronger pulse */
-}
 
 /* Style for active button (optional, to indicate the current page) */
 .nav-link.active {
@@ -111,6 +100,33 @@ p {
     box-shadow: 0 6px 15px rgba(255, 107, 60, 0.6);
 }
 
+.sidebar {
+    position: fixed;
+    z-index: 200;
+    border-right: 1px solid #111827;
+    height: 100%;
+    background-color: #f4f4f4;
+    width: 0;
+    transition: 1s;
+}
+
+.sidebar-links {
+    margin-top: 100px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 300px;
+    position: relative;
+}
+
+.closemenu {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 30px;
+}
 
 
 /* styling hero section */
@@ -124,7 +140,7 @@ p {
     align-items: start;
     margin: auto;
     margin: 0 50px;
-    margin-top: 80px;
+    margin-top: 120px;
     animation: fade 1s;
 }
 
@@ -286,6 +302,14 @@ p {
 
 }
 
+#nav-icon{
+    display:none;
+}
+
+#nav-icon i{
+    font-size:30px;
+}
+
 .service-content-main {
     display: flex;
     flex-direction: column;
@@ -301,8 +325,6 @@ p {
 .service-img {
     width: 500px;
 }
-
-
 
 .container {
     display: flex;
@@ -322,6 +344,12 @@ p {
     animation: load;
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    order:2;
 }
 
 .image-container img {
@@ -596,4 +624,11 @@ footer {
     }
 }
 
-@media only screen and (max-width: 730) {}
+@media (max-width: 800px) {
+    .top-link {
+        display: none;
+    }
+    .menubar{
+        display: block;
+    }
+}

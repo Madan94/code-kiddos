@@ -141,7 +141,7 @@ professors.forEach(professor => {
                 </div>
                 <div class="teacher-content">
                     <div class="teacher-name">${professor.name}</div>
-                    <div class="teacher-bio">${professor.education.slice(0,25)}...</div>
+                    <div class="teacher-bio">${professor.education.slice(0, 25)}...</div>
                     <div class="teacher-department">Computer Science and Engineering</div>
                 </div>
             </div>
@@ -154,3 +154,11 @@ professors.forEach(professor => {
 
 document.querySelector('.teacher-section-main').innerHTML = allHTML
 console.log(allHTML)
+
+function openNav() {
+    document.querySelector('.sidebar').style.width = "auto"
+}
+
+function closeNav() {
+    document.querySelector('.sidebar').style.width = "0"
+}

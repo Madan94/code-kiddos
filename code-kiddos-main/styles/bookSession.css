@@ -13,6 +13,7 @@
     margin: 0 50px;
     margin-top: 50px;
     animation: fade 1s;
+    margin-top: 100px;
 }
 
 .book-section-content {
@@ -112,4 +113,16 @@
     color: white;
     padding: 10px 30px;
     border-radius: 7px;
+}
+
+
+
+@media (max-width: 800px) {
+    .top-link {
+        display: none;
+    }
+
+    .menubar {
+        display: block;
+    }
 }

@@ -20,12 +20,23 @@
     <nav class="navbar">
         <div class="brand">SLIET</div>
         <div class="nav-links-section">
+            <a href="./index.html" class="nav-link top-link">Home</a>
+            <a href="" class="nav-link top-link">About Us</a>
+            <a href="explore.html" class="nav-link top-link">Explore Mentor</a>
+            <a href="webinar.html" class="nav-link top-link">Webinars</a>
+            <p class="menubar" onclick="openNav()">MENU</p>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <div class="sidebar-links">
+            <p class="closemenu" onclick="closeNav()"><i class="fa-solid fa-circle-xmark"></i></p> <br>
             <a href="./index.html" class="nav-link">Home</a>
             <a href="" class="nav-link">About Us</a>
             <a href="explore.html" class="nav-link">Explore Mentor</a>
             <a href="webinar.html" class="nav-link">Webinars</a>
         </div>
-    </nav>
+    </div>
     <!-- Fixed chat icon -->
     <div class="fixed-chat-icon" onclick="toggleChat()">
         <img src="../images/chat.png" alt="Chat Icon" style="width: 100px; height: 90px; ">
@@ -98,11 +109,11 @@
             <div class="our-service-title" onclick="changeService(3)">Mentorship</div>
         </div>
         <div class="about-our-service">
-
+            <!-- Service Section will render here -->
         </div>
     </div>
 
-    <div class="container" style="margin-top: 70px;">
+    <div class="container">
         <div class="image-container">
             <img src="https://chronus.com/wp-content/uploads/2024/04/product_software_mentoring_enroll.png"
                 alt="Mentoring Image">
@@ -134,7 +145,7 @@
     </div><br>
 
     <!-- profile link -->
-    <div class="mentorship-container" style="margin-left: 100px;">
+    <div class="mentorship-container">
 
         <div class="text-container">
             <p class="section-title">Enhanced Mentorship Experience</p>
@@ -166,7 +177,7 @@
     <p class="subtitle">Don't Settle for Less, Join SLIET and Elevate Your Hustle Game</p>
 
     <!-- Grid -->
-    <div class="grid-container">
+    <div class="-container">
         <div class="feature-item">
             <i class="fa-solid fa-file-lines icon"></i>
             <p class="feature-title">Automated System</p>
@@ -205,14 +216,12 @@
         <div class="feature-item">
             <i class="fa-solid fa-people-group icon"></i>
             <p class="feature-title">Community Support</p>
-            <p class="feature-description">Join a vibrant community of students and mentors for collaborative learning
-                and networking.</p>
+            <p class="feature-description">Join a vibrant community of students and mentors for collaborative learning and networking.</p>
         </div>
-    </div><br><br>
-    <br><br>
+    </div>
 
 
-    <img src="../images/professor.jpeg" alt="" style="margin: auto; display: block; width: 100%;">
+    <img src="../images/professor.jpeg" alt="group-image" style="margin: auto; display: block; width: 100%;">
     <footer>
         <div class="footer-container">
             <div class="footer-section">
