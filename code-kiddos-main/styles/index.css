@@ -1,15 +1,15 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding:0;
+    padding: 0;
     overflow-x: hidden;
     scrollbar-width: none;
 }
 
 body {
     background-color: #f7f7f7;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
     font-family: "Poppins", sans-serif;
 }
 
@@ -39,7 +39,7 @@ p {
     color: #333;
 }
 
-.menubar{
+.menubar {
     display: none;
     cursor: pointer;
 }
@@ -253,7 +253,8 @@ p {
 .our-service-section {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     row-gap: 50px;
     /* width: 1400px; */
     margin: auto;
@@ -265,6 +266,9 @@ p {
 
 .our-service-navbar {
     display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 40px;
     align-items: center;
     justify-content: space-around;
     font-size: 20px;
@@ -299,15 +303,16 @@ p {
     column-gap: 20px;
     align-self: center;
     margin: auto 50px;
+    width: 90%;
 
 }
 
-#nav-icon{
-    display:none;
+#nav-icon {
+    display: none;
 }
 
-#nav-icon i{
-    font-size:30px;
+#nav-icon i {
+    font-size: 30px;
 }
 
 .service-content-main {
@@ -327,6 +332,7 @@ p {
 }
 
 .container {
+    margin: 15px;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -346,10 +352,10 @@ p {
     animation-range: entry 0 cover 40%;
 }
 
-.image-container{
+.image-container {
     display: flex;
     justify-content: center;
-    order:2;
+    order: 2;
 }
 
 .image-container img {
@@ -568,9 +574,6 @@ footer {
     border-radius: 0.5rem;
     text-align: center;
     transition: background-color 0.3s ease;
-    animation: fade;
-    animation-timeline: view();
-    animation-range: entry 0 cover 40%;
 }
 
 .feature-item:hover {
@@ -628,7 +631,38 @@ footer {
     .top-link {
         display: none;
     }
-    .menubar{
+
+    .menubar {
         display: block;
+    }
+
+    .our-service-section {
+        width: 100%;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+        margin-top: 3.5rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    .service-img {
+        width: 300px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2.5rem;
+        margin-top: 3.5rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
     }
 }
