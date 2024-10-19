@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professor Profile</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d8ca3bfef7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../styles/profile.css" />
+  </head>
+
+  <body>
+    <!-- back link -->
+    <a href="explore.html" class="back-link">
+      <img src="../images/back.svg" alt="Go Back" class="back-icon" />
+    </a>
+
+    <div class="profile-container">
+      <div class="profile-card">
+        <div class="image-container">
+          <img
+            id="professor-image"
+            class="mentor-image"
+            alt="Professor Image"
+          />
+        </div>
+        <div class="profile-details">
+          <h2 id="professor-name"></h2>
+          <p id="professor-education"></p>
+          <p id="professor-email"></p>
+          <p id="professor-phone"></p>
+        </div>
+        <br />
+      </div>
+      <div class="total">
+        <!-- Tabs Navigation -->
+        <div class="tabs">
+          <div class="tab active" data-target="sessions">Sessions</div>
+          <div class="tab" data-target="about">About</div>
+          <div class="tab" data-target="expertise">Expertise</div>
+          <div class="tab" data-target="reviews">Reviews</div>
+        </div>
+
+        <!-- Content Sections -->
+        <div class="content">
+          <!-- Sessions Section -->
+          <div class="section active" id="sessions">
+            <h2>Sessions</h2>
+            <div class="session">
+              <div>
+                <h3>Session 1</h3>
+                <p><span class="sub-head">Timings:</span> 8:00 - 9:00</p>
+                <p>
+                  <span class="sub-head">Description:</span> This session will
+                  cover the basics of HTML and CSS, with hands-on practice.
+                </p>
+                <a href="booking.html" class="session-link">Join Session</a>
+              </div>
+
+              <div>
+                <h3>Session 1</h3>
+                <p><span class="sub-head">Timings:</span> 8:00 - 9:00</p>
+                <p>
+                  <span class="sub-head">Description:</span> This session will
+                  cover the basics of HTML and CSS, with hands-on practice.
+                </p>
+                <a href="#" class="session-link">Join Session</a>
+              </div>
+              <div>
+                <h3>Session 1</h3>
+                <p><span class="sub-head">Timings:</span> 8:00 - 9:00</p>
+                <p>
+                  <span class="sub-head">Description:</span> This session will
+                  cover the basics of HTML and CSS, with hands-on practice.
+                </p>
+                <a href="#" class="session-link">Join Session</a>
+              </div>
+              <div>
+                <h3>Session 1</h3>
+                <p><span class="sub-head">Timings:</span> 8:00 - 9:00</p>
+                <p>
+                  <span class="sub-head">Description:</span> This session will
+                  cover the basics of HTML and CSS, with hands-on practice.
+                </p>
+                <a href="#" class="session-link">Join Session</a>
+              </div>
+              <div>
+                <h3>Session 1</h3>
+                <p><span class="sub-head">Timings:</span> 8:00 - 9:00</p>
+                <p>
+                  <span class="sub-head">Description:</span> This session will
+                  cover the basics of HTML and CSS, with hands-on practice.
+                </p>
+                <a href="#" class="session-link">Join Session</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- About Section -->
+          <div class="section" id="about">
+            <h2 class="sub-title">About</h2>
+            <p style="font-size: 19px; padding: 30px">
+              I'am a professor in the Department of Computer Science at Sant
+              Longowal Institute of Engineering and Technology (SLIET). With a
+              Ph.D. in [Field of Study] from [University Name], my academic
+              journey has been deeply rooted in both teaching and research.
+              <br /><br />
+              My primary areas of interest include [Research Area 1], [Research
+              Area 2], and [Research Area 3]. Over the years, I have published
+              several research papers in respected journals and presented my
+              work at international conferences. I’m passionate about guiding
+              students in their academic and research pursuits, particularly in
+              [Specialization/Field].
+              <br /><br />
+              In addition to teaching, I am involved in [administrative roles,
+              project work, collaborations, etc.], contributing to the
+              development of my department and the institute as a whole.
+            </p>
+          </div>
+
+          <!-- Expertise Section -->
+          <div class="section" id="expertise">
+            <h2 class="sub-title">Skills & Expertise</h2>
+            <div class="tags" style="padding: 30px">
+              <span class="tag">Mentoring</span>
+              <span class="tag">Software development</span>
+              <span class="tag">Software development life cycle (SDLC)</span>
+              <span class="tag"
+                >Collaboration tools (e.g. Slack, Microsoft Teams)</span
+              >
+              <span class="tag">Open source software development</span>
+              <span class="tag">Software engineer or developer</span>
+              <span class="tag">Programming (various languages)</span>
+              <span class="tag">Content creation</span>
+              <span class="tag">Object-oriented programming (OOP)</span>
+              <span class="tag">Functional programming (FP)</span>
+              <span class="tag">React</span>
+              <span class="tag">Java</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">GraphQL API design and implementation</span>
+            </div>
+          </div>
+
+          <!-- Reviews Section -->
+          <div class="section" id="reviews">
+            <h2 class="sub-title">Reviews</h2>
+            <div class="review-container">
+              <div class="review-header">
+                <img
+                  src="../images/user.png"
+                  alt="YouTube Logo"
+                  class="profile-img"
+                />
+                <div class="reviewer-info">
+                  <p class="reviewer-name">Ananya</p>
+                  <img
+                    src="../images/rating-star.png"
+                    alt="Rating Star"
+                    class="rating-star"
+                    height="100px"
+                    width="100px"
+                  />
+                </div>
+              </div>
+              <p class="review-text">
+                I attended the webinar led by [Teacher's Name], and it was
+                fantastic! Their ability to explain complex concepts in an
+                engaging manner made the session enjoyable. I especially
+                appreciated the real-life examples shared, which helped solidify
+                my understanding of the topic.
+              </p>
+            </div>
+            <br />
+            <hr />
+            <div class="review-container">
+              <div class="review-header">
+                <img
+                  src="../images/user.png"
+                  alt="YouTube Logo"
+                  class="profile-img"
+                />
+                <div class="reviewer-info">
+                  <p class="reviewer-name">Aravind</p>
+                  <img
+                    src="../images/rating-star.png"
+                    alt="Rating Star"
+                    class="rating-star"
+                    height="100px"
+                    width="100px"
+                  />
+                </div>
+              </div>
+              <p class="review-text">
+                Amazing Teacher! Overall I gained more knowledge from him!..
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../scripts/profile.js"></script>
+  </body>
+</html>

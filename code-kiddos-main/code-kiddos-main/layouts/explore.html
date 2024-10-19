@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Profiles</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d8ca3bfef7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/explore.css">
+    <script type="module" src="../scripts/profile.js"></script>
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <!-- <video class="video-background" autoplay muted loop>
+        <source src="../images/bg-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video> -->
+
+    <body>
+        <nav class="navbar">
+            <a href="./index.html" class="brand">SLIET</a>
+            <div class="nav-links-section">
+                <a href="./index.html" class="nav-link top-link">Home</a>
+                <a href="bookSession.html" class="nav-link top-link">Schedule now</a>
+                <a href="explore.html" class="nav-link top-link">Explore Mentor</a>
+                <a href="webinar.html" class="nav-link top-link">Webinars</a>
+                <p class="menubar" onclick="openNav()">MENU</p>
+            </div>
+        </nav>
+
+        <div class="sidebar">
+            <div class="sidebar-links">
+                <p class="closemenu" onclick="closeNav()"><i class="fa-solid fa-circle-xmark"></i></p> <br>
+                <a href="./index.html" class="nav-link">Home</a>
+                <a href="" class="nav-link">About Us</a>
+                <a href="explore.html" class="nav-link">Explore Mentor</a>
+                <a href="webinar.html" class="nav-link">Webinars</a>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <img src="../images/search.png" alt="" width="50px" height="50px">
+            <input type="text" id="searchBar" placeholder="Search by name..." onkeyup="searchProfessors()">
+        </div>
+
+        <!-- Main Container where professor cards will be dynamically inserted -->
+        <div class="container">
+            <!-- Professor cards will be added here by JavaScript -->
+        </div>
+
+        <!-- Link to the external JavaScript file -->
+        <script src="../scripts/explore.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Fixed image style */
+.fixed-chat-icon {
+    position: fixed;
+    bottom: 20px;
+    /* Adjust as necessary */
+    right: 20px;
+    /* Adjust as necessary */
+    cursor: pointer;
+    /* Indicate it's clickable */
+    z-index: 1000;
+    /* Make sure it's above other content */
+    animation: bounce 2s infinite, rotate 4s linear infinite;
+    /* Bounce and rotate animations */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    /* Smooth hover effect */
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    /* Gradient background */
+    border-radius: 50%;
+    /* Make it circular */
+    padding: 10px;
+    /* Space around the icon */
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+    /* Depth effect */
+}
+
+/* Pulse animation */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.fixed-chat-icon:hover {
+    transform: scale(1.1);
+    /* Slightly increase size on hover */
+    box-shadow: 0 0 25px rgba(0, 123, 255, 1);
+    /* Glow effect on hover */
+    animation: pulse 1s infinite;
+    /* Pulse effect on hover */
+}
+
+/* Bounce animation keyframes */
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Rotate animation keyframes */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.chatbox {
+    width: 400px;
+    height: 500px;
+    background: #fff;
+    margin: 0 auto;
+    /* Centered horizontally */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+    /* Hide chatbox by default */
+    position: fixed;
+    /* Fix it to the bottom */
+    bottom: 150px;
+    /* Adjust based on the fixed image height */
+    right: 20px;
+    /* Align with the image */
+    z-index: 100;
+}
+
+.chatlogs {
+    padding: 20px;
+    height: 400px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.chat-input button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.chat-message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
+.chat-message.user {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+}
+
+.chat-message.bot {
+    background-color: #f1f1f1;
+    color: black;
+    align-self: flex-start;
+}
+
+@media (max-width: 800px) {
+    .top-link {
+        display: none;
+    }
+
+    .menubar {
+        display: block;
+    }
+}
