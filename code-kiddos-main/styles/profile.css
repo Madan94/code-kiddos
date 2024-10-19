@@ -1,0 +1,368 @@
+/* Styling for profile page */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('../images/bg.svg'); /* Replace with the actual path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.profile-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.profile-card {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+
+.mentor-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: -100px;
+    transition: transform 0.3s ease;
+}
+
+.mentor-image:hover {
+    transform: scale(1.05); /* Enlarge the image on hover */
+}
+
+.profile-details {
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+
+}
+
+.back-btn {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fc8019;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: #fff;
+    color: #fc8019;
+}
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+/* Tabs styles */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f56464;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 30px;
+    
+}
+
+.tab {
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #ff0066;
+    border-radius: 5px;
+}
+
+/* Sessions Container */
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+
+/* Section Styles */
+.section {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9; /* Light background color */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    max-width: 800px; /* Limit the width */
+    margin: 20px auto; /* Center the section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.section h2 {
+    margin-bottom: 15px; /* Space below the heading */
+    font-size: 24px; /* Font size */
+    text-align: center; /* Centered text */
+}
+.section.active {
+    display: block;
+}
+
+/* Cards Container */
+.session-cards {
+    display: flex;
+    gap: 20px;
+}
+.tags {
+    display: flex; /* Use flexbox */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 10px; /* Space between tags */
+    justify-content: center; /* Center tags */
+}
+
+.tag {
+    background-color: #e0e0e0; /* Background color for tags */
+    border-radius: 5px; /* Rounded corners for tags */
+    padding: 10px 15px; /* Padding for tags */
+    font-size: 14px; /* Font size for tags */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.tag:hover {
+    transform: scale(1.05); /* Enlarge on hover */
+    background-color: #111827; /* Slightly darker background on hover */
+    color: white;
+}
+/* Card styles */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.card-info p {
+    font-size: 14px;
+    color: #555;
+}
+/* Parent div styling */
+/* Styling for the session container */
+.session {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Flexbox layout for session header (image + text) */
+  .session-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Styling for the professor's photo */
+  .professor-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+  
+  /* Styling for the session information (name, description) */
+  .session-info {
+    flex-grow: 1;
+  }
+  
+  .session-info h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .session-info p {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #666;
+  }
+  
+/* Session Link Button Styles */
+/* Session Link Button Styles */
+.session-link {
+    text-decoration: none;
+    color: #111827;
+    font-weight: 400;
+    font-size: 22px;
+    transition: .2s;
+    display: inline-block; /* Make the button inline-block for padding */
+    padding: 10px 20px; /* Add some padding for a better button shape */
+    background-color: #f56464; /* Main button color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Slightly rounded corners */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 16px; /* Font size for better readability */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    animation: pulse 1.5s infinite; /* Enhanced pulse animation */
+}
+
+/* Hover Effect */
+.session-link:hover {
+    background-color: #e65a29; /* Darker orange on hover */
+    box-shadow: 0 12px 30px rgba(255, 107, 60, 0.9), 0 0 20px rgba(255, 107, 60, 1); /* Stronger glow */
+    transform: scale(1.1); /* Bigger zoom effect */
+}
+
+/* Enhanced Pulse Animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 60, 0.7), 0 0 15px rgba(255, 107, 60, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 25px 25px rgba(255, 107, 60, 0), 0 0 30px rgba(255, 107, 60, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 60, 0.7), 0 0 15px rgba(255, 107, 60, 0.7);
+    }
+}
+
+/* Active Button Style */
+.session-link.active {
+    background-color: #ff6b3c; /* Highlight active page */
+    color: white; /* Keep text color white */
+    font-weight: bold; /* Bold text for emphasis */
+    box-shadow: 0 6px 15px rgba(255, 107, 60, 0.6); /* Shadow for active state */
+}
+
+
+
+.total{
+    max-width: 700px;
+}
+
+/* adding some minority styles */
+.sub-head{
+    color: #f56464;
+    font-weight: bold;
+}
+
+.sub-title{
+color: #fc8019; 
+text-decoration: underline;
+}
+/* Flexbox for the Rating Section */
+.rating-section-head {
+    font-size: larger;
+    font-weight: bold;
+    margin-left: 110px;
+    display: flex;
+    gap: 10px; /* Align text and image on opposite sides */
+    align-items: center; /* Vertically center the text and image */
+    padding: 10px; /* Add padding if necessary */
+}
+
+/* Star Icon Styling */
+.star-icon {
+    height: 25px; /* Set icon height */
+    width: 25px;  /* Set icon width */
+}
+
+/* Back link styling */
+.back-link {
+    position: fixed;
+    top: 20px;    /* Distance from the top */
+    left: 20px;   /* Distance from the left */
+    z-index: 100; /* Ensure it stays on top of other content */
+}
+
+/* Back icon styling */
+.back-icon {
+    width: 40px;   /* Adjust size of the icon */
+    height: 40px;
+    cursor: pointer; /* Make it clickable */
+}
+
+/* Container styling */
+.review-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/* Flex row between image and text */
+.review-header {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Adjust this value to control the space */
+    align-items: center;
+}
+
+/* Profile image */
+.profile-img {
+    height: 60px;
+    width: 60px;
+}
+
+/* Reviewer details */
+.reviewer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewer-name {
+    margin-top: 16px;
+    font-size: 1.25rem; /* Equivalent to text-xl */
+    font-weight: 600; /* Equivalent to font-semibold */
+}
+
+/* Rating star image */
+.rating-star {
+    height: 70px;
+    width: 70px;
+}
+
+/* Review text */
+.review-text {
+    margin-left: 80px; /* Equivalent to ml-20 */
+}

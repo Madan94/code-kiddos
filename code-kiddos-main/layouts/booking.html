@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book your Mentor</title>
+
+    <link rel="stylesheet" href="../styles/booking.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="brand">SLIET</div>
+        <div class="nav-links-section">
+            <a href="./index.html" class="nav-link">Home</a>
+            <a href="" class="nav-link">About Us</a>
+            <a href="explore.html" class="nav-link">Explore Mentor</a>
+            <a href="" class="nav-link">Contact Us</a>
+        </div>
+    </nav>
+
+
+    <div class="booking-container">
+        <div class="container">
+            <h1>1:1 Mentorship & Career Counselling</h1>
+            <div class="date-picker">
+                <button class="nav-btn" id="prevBtn">&lt;</button>
+                <div id="dates" class="dates">
+                    <!-- Dates will be inserted dynamically here -->
+                </div>
+                <button class="nav-btn" id="nextBtn">&gt;</button>
+            </div>
+
+            <div class="time-slots">
+                <h2>Select Time:</h2>
+                <div class="time-options" id="timeSlots">
+                    <!-- Time slots will be inserted dynamically here -->
+                </div>
+            </div>
+
+            <div class="payment">
+                <p><strong>Meeting:</strong> 1:1 Video</p>
+                <p><strong>Date:</strong> <span id="selectedDate">18-10-2024</span></p>
+                <p><strong>Duration:</strong> 30 Min</p>
+                <button class="book-btn" onclick="openBookingModal()"">Book Now</button>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+<div class=" modal" id="bookingModal">
+                    <div class="modal-content">
+                        <span class="close-btn" onclick="closeBookingModal()">&times;</span>
+                        <h2>Confirm Your Bo</h2>
+                        <form id="bookingForm" style="width: 470px;">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="phone">Mobile No:</label>
+                            <input type="tel" id="phone" name="phone" required>
+
+                            <label for="message">Leave Your Message:</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+
+                            <button type="submit" class="confirm-btn">Confirm Your Slot</button>
+                        </form>
+                    </div>
+            </div>
+        </div>
+
+        <script src="../scripts/booking.js"></script>
+</body>
+
+</html>
