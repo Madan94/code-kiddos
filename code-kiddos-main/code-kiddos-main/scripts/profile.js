@@ -204,7 +204,7 @@ function updateSessionSection(professor) {
   document.querySelector(".session").innerHTML =
     sessionHeader +
     `
-      <a href="#" class="session-link">Join Session</a>
+      <a href="booking.html" class="session-link">Join Session</a>
     `;
 }
 
