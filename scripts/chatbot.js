@@ -61,7 +61,7 @@ function botReply(userMessage) {
     // Redirect to mentor page if the user is asking about mentors
     if (containsWord(userMessage, ['mentor', 'mentor details', 'find mentor' ,'teacher','professor' , 'student'])) {
         setTimeout(() => {
-            window.location.href = 'code-kiddos/layouts/explore.html';  // Replace with the actual URL of your mentors page
+            window.location.href = '/code-kiddos/layouts/explore.html';  // Replace with the actual URL of your mentors page
         }, 2000); // Redirect after a short delay to give the bot time to respond
     }
 }
