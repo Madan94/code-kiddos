@@ -1,4 +1,128 @@
-/* Container for the webinars section */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f8fa;
+    color: #333;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .faq-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1100px;
+    margin: 50px auto; /* Margin for spacing */
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .faq-left {
+    flex: 1;
+    padding: 30px;
+    background-color: #ffe3c1; /* Orange background */
+    border-radius: 15px 0 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Move text to the bottom */
+    position: relative;
+    overflow: hidden;
+    z-index: 1; /* Background is below the image */
+  }
+  
+  .faq-left img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    height: auto;
+    opacity: 0.7; /* Make the image slightly transparent */
+    z-index: 2; /* Image is above the orange background */
+  }
+  
+  .faq-left h1, .faq-left p {
+    z-index: 3; /* Bring text above the image */
+    position: relative;
+  }
+  
+  .faq-left h1 {
+    font-size: 36px;
+    color: #333; /* Black for the main title */
+  }
+  
+  .faq-left p {
+    font-size: 18px;
+    color: #666; /* Grey for the description text */
+    margin-top: 10px;
+  }
+  
+  .faq-right {
+    flex: 2;
+    padding: 30px;
+  }
+  
+  .faq-item {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    border-radius: 15px;
+  }
+  
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+  
+  .faq-question {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .faq-question:hover {
+    background-color: #ffe3c1;
+  }
+  
+  .faq-question h3 {
+    font-size: 18px;
+    color: #333; /* Black for the question text */
+  }
+  
+  .faq-answer {
+    display: none;
+    padding: 20px;
+    font-size: 18px;
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+    line-height: 1.5;
+    color: #666; /* Grey for answer text */
+  }
+  
+  .toggle-icon {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff7b00;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-question.active .toggle-icon {
+    transform: rotate(45deg);
+  }
+  
+  /* Container for the webinars section */
 .webinars-container {
     padding-left: 7%; /* Equivalent to ml-28 */
     padding-right: 10%; /* Equivalent to mr-40 */
