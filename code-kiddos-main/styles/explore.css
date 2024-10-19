@@ -13,6 +13,17 @@ body{
 *{
     box-sizing: border-box;
 }
+.back-icon {
+    width: 40px;   /* Adjust size of the icon */
+    height: 40px;
+    cursor: pointer; /* Make it clickable */
+}
+.back-link {
+    position: fixed;
+    top: 20px;    /* Distance from the top */
+    left: 20px;   /* Distance from the left */
+    z-index: 100; /* Ensure it stays on top of other content */
+}
 
 .explore-mentors{
     display: flex;
