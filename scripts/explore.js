@@ -5,7 +5,7 @@ const professors = [
         education: "Ph.D., M.E.",
         email: ['birmohansingh@sliet.ac.in', 'birmohans@gmail.com'],
         phone: "+91-1672-253208",
-        image: "http://sliet.ac.in/wp-content/uploads/avatars/5/6fc17d6735998f4f22a0e91fbf43b75c-bpfull.jpg"
+        image: "../images/img1.jpg"
     },
     {
         name: "Dr. Damanpreet Singh",
