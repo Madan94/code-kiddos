@@ -4,7 +4,7 @@ const service_content = [
         head: "Sell 1 : 1 Video Call.",
         content: "Connect with experienced faculty mentors to clarify your doubts and receive personalized guidance tailored to your academic and career goals.",
         feature: "Easy Scheduling Book sessions effortlessly based on mentor availability. <br><br> Reminder Notifications Receive timely alerts for your upcoming sessions. <br><br> Interactive Discussions Engage in meaningful conversations to enhance your learning experience.",
-        image: "../images/video_call.png"
+        image: "./images/video_call.png"
     },
 
     {
@@ -12,14 +12,14 @@ const service_content = [
         content: "No need to share personal contact details. Communicate directly with your mentors through our secure messaging platform.",
         feature: "Intuitive Chat Interface Enjoy smooth navigation for effective communication. <br><br> File Sharing Easily share documents, notes, or resources during your chats.",
         feature: "User-Friendly Chat Interface Enjoy Effortless navigation and seamless chatting experience. <br><br> Rich Media Support Sharing Design Mockups, Presentations, Resumes, or any other files is fluidly integrated into your conversations.",
-        image: "../images/dms.png"
+        image: "./images/dms.png"
     },
 
     {
         head: "Join Engaging Webinars",
         content: "Participate in webinars focused on career development, skill-building, and industry insights led by knowledgeable faculty.",
         feature: "Comprehensive Support From registration to follow-ups, we handle all aspects of your webinar experience. <br><br> Participant Engagement Track attendance and gather feedback with ease.",
-        image: "../images/webniar.png"
+        image: "./images/webniar.png"
     },
 
     {
@@ -27,7 +27,7 @@ const service_content = [
     head: "Connect Through Mentorship",
     content: "Establish meaningful connections with faculty mentors who provide personalized guidance and support throughout your academic journey.",
     feature: "Personalized Guidance Receive tailored advice from experienced faculty. <br><br> Strengthened Connections Foster long-term relationships that enhance your learning experience.",
-        image: "../images/exclusive_content.png"
+        image: "./images/exclusive_content.png"
     }
 ]
 
